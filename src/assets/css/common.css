@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after,
+h1 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter;
+  width: 100%;
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+:root {
+  --grey: #343838;
+  --red: #E74C3C;
+  --white: #F1F1F1;
+  --grey-light: #E6E6E6;
+}
+
+#app {
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1345px;
+  padding: 0 30px;
+}
+
+.title1 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  color: var(--white);
+}
+
+.title2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  color: var(--white);
+}
+
+.title3 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--grey);
+}
+
+.title4 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--white);
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- оставить заявку -->
+    <div class="modal">
+      <div class="modal-content">
+        <button class="modal-close-btn" aria-label="закрыть окно">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.625 19.375L19.375 10.625" stroke="#343838" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M19.375 19.375L10.625 10.625" stroke="#343838" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+        </button>
+        <form action="/" id="applyForm" class="modal-form">
+          <h2 class="modal-form-title title2">ОСТАВИТЬ ЗАЯВКУ</h2>
+          <p class="modal-form-desc title4">пожалуйста, укажите свои контакты для связи</p>
+
+          <input type="text" class="modal-form-input" placeholder="Ваше имя">
+          <input type="email" class="modal-form-input" placeholder="Ваш email">
+          <input type="tel" class="modal-form-input" placeholder="Ваш телефон">
+          <textarea name="modal-comment" id="modal-comment" cols="30" rows="8" placeholder="Комментарии"
+            class="modal-comment"></textarea>
+          <button class="modal-form-btn title4">ОТПРАВИТЬ</button>
+        </form>
+
+      </div>
+    </div>
+    <!-- спасибо -->
+    <div class="modal thanks">
+      <div class="modal-content">
+        <button class="modal-close-btn" aria-label="закрыть окно">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.625 19.375L19.375 10.625" stroke="#343838" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M19.375 19.375L10.625 10.625" stroke="#343838" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+        </button>
+        <img class="thanks-img" src="./src/assets/images/icons/ok.svg" alt="выполнено">
+        <h2 class="modal-form-title title2">СПАСИБО!</h2>
+        <p class="modal-form-desc title4">Как только товар
+          появится в продаже, мы свяжемся с вами!</p>
+
+
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <img class="header-img" src="./src/assets/images/icons/logo.svg" alt="KAPSEN логотип">
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li class="header-nav-list-item title3"><a class="header-nav-list-item-link" href="#">Каталог</a></li>
+            <li class="header-nav-list-item title3"><a class="header-nav-list-item-link" href="#">О нас</a></li>
+            <li class="header-nav-list-item title3"><a class="header-nav-list-item-link" href="#">Оптовикам</a></li>
+            <li class="header-nav-list-item title3"><a class="header-nav-list-item-link" href="#">Сервис</a></li>
+            <li class="header-nav-list-item title3"><a class="header-nav-list-item-link" href="#">Контакты</a></li>
+            <li class="header-nav-list-item title3"><a class="header-nav-list-item-link" href="#">Корзина</a></li>
+          </ul>
+        </nav>
+        <div class="header-links">
+          <a class="header-links-item title3" href="tel:88002507994">8 (800) 250 79 94</a>
+          <a class="header-links-item title3" href="tel:88432155262">8 (843) 215 52 62</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <img class="hero-img " src="./src/assets/images/icons/logoBull.svg" alt="KAPSEN логотип">
+        <h1 class="hero-title">Сила в мощи
+          маневренность в умении
+          скорость в результатах</h1>
+        <button class="hero-btn" aria-label="обратная связь"><img src="./src/assets/images/icons/messages.svg"
+            alt="обратная связь"></button>
+      </div>
+    </section>
+
+    <section class="choice">
+      <div class="container">
+        <ul class="wheel-choice-list animate">
+          <li class="wheel-choice-list-item">
+            <img class="wheel-choice-list-item-img" src="./src/assets/images/wheel/home1.png" alt="ДАЛЬНЕМАГИСТРАЛЬНЫЕ">
+            <h2 class="wheel-choice-list-item-title title2">ДАЛЬНЕМАГИСТРАЛЬНЫЕ</h2>
+          </li>
+          <li class="wheel-choice-list-item">
+            <img class="wheel-choice-list-item-img" src="./src/assets/images/wheel/home2.png" alt="ДОРОГА / БЕЗДОРОЖЬЕ">
+            <h2 class="wheel-choice-list-item-title title2">ДОРОГА / БЕЗДОРОЖЬЕ</h2>
+          </li>
+          <li class="wheel-choice-list-item">
+            <img class="wheel-choice-list-item-img" src="./src/assets/images/wheel/home3.png" alt="БЕЗДОРОЖЬЕ">
+            <h2 class="wheel-choice-list-item-title title2">БЕЗДОРОЖЬЕ</h2>
+          </li>
+        </ul>
+
+        <a class="choice-more title2" href="#">смотреть все</a>
+
+        <ul class="type-choice-list animate">
+          <li class="type-choice-list-item">
+            <img class="type-choice-list-item-img" src="./src/assets/images/homeType1.svg" alt="универсальные">
+            <h2 class="type-choice-list-item-title title3">УНИВЕРСАЛЬНЫЕ</h2>
+          </li>
+          <li class="type-choice-list-item">
+            <img class="type-choice-list-item-img" src="./src/assets/images/homeType2.svg" alt="на рулевую ось">
+            <h2 class="type-choice-list-item-title title3">НА РУЛЕВУЮ ОСЬ</h2>
+          </li>
+          <li class="type-choice-list-item">
+            <img class="type-choice-list-item-img" src="./src/assets/images/homeType3.svg" alt="на ведущую ось">
+            <h2 class="type-choice-list-item-title title3">НА ВЕДУЩУЮ ОСЬ</h2>
+          </li>
+          <li class="type-choice-list-item">
+            <img class="type-choice-list-item-img" src="./src/assets/images/homeType4.svg" alt="на прицепную ось">
+            <h2 class="type-choice-list-item-title title3">НА ПРИЦЕПНУЮ ОСЬ</h2>
+          </li>
+        </ul>
+
+        <a class="choice-more title2" href="#">смотреть все</a>
+
+      </div>
+    </section>
+
+    <div class="dirt"></div>
+    <section class="advantages">
+      <div class="container">
+        <h2 class="advantages-title title1">НАШИ ПРЕИМУЩЕСТВА</h2>
+        <ul class="advantages-list">
+          <li class="advantages-list-item">
+            <img class="advantages-list-item-img" src="./src/assets/images/icons/user-octagon.svg" alt="специалисты">
+            <h3 class="advantages-list-item-title title2">ГРАМОТНЫЕ СПЕЦИАЛИСТЫ</h3>
+            <p class="advantages-list-item-desc title3">описание грамотных специалистов описание грамотных специалистов
+            </p>
+          </li>
+          <li class="advantages-list-item">
+            <img class="advantages-list-item-img" src="./src/assets/images/icons/empty-wallet.svg" alt="цены">
+            <h3 class="advantages-list-item-title title2">ЧЕСТНЫЕ ЦЕНЫ</h3>
+            <p class="advantages-list-item-desc title3">низкие цены описание причины
+              низкие цены описание причины
+            </p>
+          </li>
+          <li class="advantages-list-item">
+            <img class="advantages-list-item-img" src="./src/assets/images/icons/medal-star.svg" alt="стандарт">
+            <h3 class="advantages-list-item-title title2">ВЫСОКИЕ СТАНДАРТЫ КАЧЕСТВА</h3>
+            <p class="advantages-list-item-desc title3">описание высоких стандартов качества описание высоких стандартов
+              качества
+            </p>
+          </li>
+        </ul>
+
+
+      </div>
+
+    </section>
+    <div class="dirt dirt-adv"></div>
+
+    <section class="feedback">
+      <div class="container">
+        <h2 class="feedback-title title1">
+          ОБРАТНАЯ СВЯЗЬ
+        </h2>
+        <p class="feedback-desc title2">Остались вопросы? Оставьте ваш номер телефона и мы перезвоним в ближайшее время
+        </p>
+
+        <form class="feedback-form" action="/">
+          <input class="feedback-form-input title2" type="text" placeholder="Имя">
+          <input class="feedback-form-input title2" type="tel" placeholder="Телефон">
+          <button class="feedback-form-btn title3">ЗАКАЗАТЬ ЗВОНОК</button>
+        </form>
+      </div>
+    </section>
+    <div class="dirt"></div>
+
+    <footer class="footer">
+      <div class="container">
+        <img class="footer-logo" src="./src/assets/images/icons/logoBullLight.svg" alt="KAPSEN логотип">
+
+        <ul class="footer-list title4">
+          <li class="footer-list-item "><a href="#">КАТАЛОГ</a></li>
+          <li class="footer-list-item "><a href="#">О нас</a></li>
+          <li class="footer-list-item "><a href="#">Оптовикам</a></li>
+          <li class="footer-list-item ">Сервис<a href="#"></a></li>
+          <li class="footer-list-item ">Контакты<a href="#"></a></li>
+        </ul>
+
+        <button class="footer-btn apply-btn title4">Оставить заявку</button>
+
+        <div class="footer-links">
+          <a class="header-links-item title2" href="tel:88002507994">8 (800) 250 79 94</a>
+          <a class="header-links-item title2" href="tel:88432155262">8 (843) 215 52 62</a>
+          <ul class="footer-links-list">
+            <li class="footer-links-list-item"><a href="">
+                <img src="./src/assets/images/icons/Telegram.svg" alt="telegram">
+              </a>
+            </li>
+            <li class="footer-links-list-item"><a href="">
+                <img src="./src/assets/images/icons/WA.svg" alt="whatsapp">
+              </a>
+            </li>
+            <li class="footer-links-list-item"><a href="">
+                <img src="./src/assets/images/icons/Insta.svg" alt="instagram">
+              </a>
+            </li>
+            <li class="footer-links-list-item"><a href="">
+                <img src="./src/assets/images/icons/VK.svg" alt="vk">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <img class="csg" src="./src/assets/images/icons/CSG.svg" alt="Creative Sight Group - студия веб-дизайна">
+    </footer>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

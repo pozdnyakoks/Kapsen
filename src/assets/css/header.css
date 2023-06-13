@@ -1,0 +1,44 @@
+.header {
+  padding-top: 44px;
+  margin-bottom: 40px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-nav-list {
+  display: flex;
+  gap: 16px;
+}
+
+.header-nav-list-item {
+  text-transform: uppercase;
+}
+
+.header-nav-list-item:last-child {
+  padding-left: 45px;
+  position: relative;
+}
+
+.header-nav-list-item:last-child::before {
+  position: absolute;
+  content: '';
+  top: 18%;
+  left: 24%;
+  width: 4px;
+  height: 60%;
+  background-color: var(--red);
+}
+
+.header-links {
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-links-item {
+  color: var(--red);
+}
