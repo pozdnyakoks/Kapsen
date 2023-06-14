@@ -1,3 +1,33 @@
+.home {
+  display: none;
+  /* display: block; */
+  opacity: 0;
+  transition: opacity .5s ease;
+  /* opacity: 1; */
+  transform: scale(0);
+  height: 0;
+  transition: transform .5s ease, opacity .5s ease;
+}
+
+.home.hidden {
+  opacity: 0;
+}
+
+.home.visible {
+  height: 100%;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.home.none {
+  display: none;
+}
+
+.home.block {
+  display: block;
+}
+
+
 /* hero */
 
 .hero {
@@ -88,9 +118,12 @@
   gap: 32px;
 }
 
+.wheel-choice-list-link {
+  width: 33%;
+}
+
 .wheel-choice-list-item {
   text-transform: uppercase;
-  width: 33%;
   padding: 25px;
   position: relative;
   height: 280px;

@@ -20,12 +20,19 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+  transition: .3s ease;
+}
+
+a:hover,
+button:hover {
+  opacity: 0.7
 }
 
 button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: .3s ease;
 }
 
 :root {
@@ -38,6 +45,10 @@ button {
 #app {
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 .container {
@@ -72,4 +83,8 @@ button {
   font-size: 16px;
   line-height: 19px;
   color: var(--white);
+}
+
+main {
+  margin-bottom: auto;
 }

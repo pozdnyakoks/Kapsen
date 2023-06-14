@@ -1,0 +1,68 @@
+.contacts {
+  display: none;
+  opacity: 0;
+  /* margin-top: 40px; */
+  margin-bottom: 203px;
+  transform: scale(0) translate(100%);
+  transition: .5s ease;
+}
+
+.contacts.hidden {
+  opacity: 0;
+}
+
+.contacts.visible {
+
+  opacity: 1;
+  transform: scale(1) translate(0);
+}
+
+.contacts.none {
+  display: none;
+}
+
+.contacts.block {
+  display: block;
+}
+
+.contacts-path {
+  color: var(--grey);
+  margin-bottom: 60px;
+}
+
+.path-link {
+  color: var(--grey-light);
+}
+
+.contacts-title {
+  color: var(--red);
+  margin-bottom: 40px;
+}
+
+.contacts-info-title {
+  color: #2d2d2d;
+  font-weight: 400;
+  margin-bottom: 30px;
+  ;
+}
+
+.contacts-info-list {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contacts-info-desc {
+  margin-left: 5px;
+}
+
+.contacts-info-link {
+  color: var(--red);
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.contacts-info-link-bottom {
+  margin-top: 24px;
+  display: block
+}

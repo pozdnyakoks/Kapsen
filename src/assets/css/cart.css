@@ -1,0 +1,25 @@
+.cart {
+  display: none;
+  opacity: 0;
+  margin-top: 40px;
+  margin-bottom: 203px;
+  transform: scale(0);
+  transition: transform .5s ease, opacity .5s ease;
+}
+
+.cart.hidden {
+  opacity: 0;
+}
+
+.cart.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.cart.none {
+  display: none;
+}
+
+.cart.block {
+  display: block;
+}

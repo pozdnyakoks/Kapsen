@@ -15,7 +15,27 @@
 }
 
 .header-nav-list-item {
+  position: relative;
   text-transform: uppercase;
+}
+
+.header-nav-list-item-link {
+  position: relative;
+}
+
+.header-nav-list-item-link::before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: var(--red);
+  bottom: -30%;
+  opacity: 0;
+  transition: opacity .3 ease;
+}
+
+.header-nav-list-item-link.active::before {
+  opacity: 1;
 }
 
 .header-nav-list-item:last-child {
