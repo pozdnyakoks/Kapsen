@@ -28,38 +28,20 @@ document.addEventListener('click', (ev) => {
   }
 })
 
-const animationEl = document.querySelectorAll('.animate')
-console.log(animationEl)
+function reveal() {
+  const animate = document.querySelectorAll('.animate')
 
-// window.addEventListener('scroll', () => {
+  for (let i = 0; i < animate.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = animate[i].getBoundingClientRect().top;
+    let elementVisible = 440;
+    if (elementTop < windowHeight - elementVisible) {
+      animate[i].classList.add("scroll");
+    }
+  }
+}
 
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     // console.log(entry)
-//     // console.log(entry.isIntersecting)
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add('scroll')
-//     }
-//     // else {
-//     //   entry.target.classList.remove('scroll')
-//     // }
-
-//   })
-// }
-//   ,
-//   {
-//     threshold: 1
-//   }
-// );
-
-
-// for (let i = 0; i < animationEl.length; i++) {
-//   const elements = animationEl[i];
-//   observer.observe(elements);
-// }
-// });
-//
-
+window.addEventListener('scroll', reveal)
 
 applyForm.addEventListener('submit', (ev) => {
   ev.preventDefault();
@@ -74,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     heroTitle.classList.add('scroll')
     heroImg.classList.add('scroll')
-  }, 2000)
+  }, 1000)
 })
 
 

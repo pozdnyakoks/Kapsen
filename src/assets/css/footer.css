@@ -86,11 +86,13 @@
   transition: .3s ease;
   opacity: 0;
   visibility: hidden;
+  content-visibility: hidden;
 }
 
 .modal.visible {
   opacity: 1;
   visibility: visible;
+  content-visibility: visible;
 }
 
 .modal-content {
