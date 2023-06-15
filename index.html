@@ -9,6 +9,11 @@
 
 <body>
   <div id="app">
+    <!-- лоадер -->
+    <div class="loader">
+      <video class="loader-video" id="loader" playsinline autoplay muted loop
+        src="./src/assets/images/Kapsen_Loader_Transparent.mp4"></video>
+    </div>
     <!-- оставить заявку -->
     <div class="modal">
       <div class="modal-content">
@@ -95,21 +100,21 @@
         <section class="choice">
           <div class="container">
             <ul class="wheel-choice-list animate">
-              <a class="wheel-choice-list-link" href="/">
+              <a class="wheel-choice-list-link" href="/catalog/longhaul">
                 <li class="wheel-choice-list-item">
                   <img class="wheel-choice-list-item-img" src="./src/assets/images/wheel/home1.png"
                     alt="ДАЛЬНЕМАГИСТРАЛЬНЫЕ">
                   <h2 class="wheel-choice-list-item-title title2">ДАЛЬНЕМАГИСТРАЛЬНЫЕ</h2>
                 </li>
               </a>
-              <a class="wheel-choice-list-link" href="/">
+              <a class="wheel-choice-list-link" href="/catalog/onoffroad">
                 <li class="wheel-choice-list-item">
                   <img class="wheel-choice-list-item-img" src="./src/assets/images/wheel/home2.png"
                     alt="ДОРОГА / БЕЗДОРОЖЬЕ">
                   <h2 class="wheel-choice-list-item-title title2">ДОРОГА / БЕЗДОРОЖЬЕ</h2>
                 </li>
               </a>
-              <a class="wheel-choice-list-link" href="/">
+              <a class="wheel-choice-list-link" href="/catalog/offroad">
                 <li class="wheel-choice-list-item">
                   <img class="wheel-choice-list-item-img" src="./src/assets/images/wheel/home3.png" alt="БЕЗДОРОЖЬЕ">
                   <h2 class="wheel-choice-list-item-title title2">БЕЗДОРОЖЬЕ</h2>
@@ -120,25 +125,25 @@
             <a class="choice-more title2" href="/catalog">смотреть все</a>
 
             <ul class="type-choice-list animate">
-              <a href="/">
+              <a href="/catalog/all">
                 <li class="type-choice-list-item">
                   <img class="type-choice-list-item-img" src="./src/assets/images/homeType1.svg" alt="универсальные">
                   <h2 class="type-choice-list-item-title title3">УНИВЕРСАЛЬНЫЕ</h2>
                 </li>
               </a>
-              <a href="/">
+              <a href="/catalog/steer">
                 <li class="type-choice-list-item">
                   <img class="type-choice-list-item-img" src="./src/assets/images/homeType2.svg" alt="на рулевую ось">
                   <h2 class="type-choice-list-item-title title3">НА РУЛЕВУЮ ОСЬ</h2>
                 </li>
               </a>
-              <a href="/">
+              <a href="/catalog/drive">
                 <li class="type-choice-list-item">
                   <img class="type-choice-list-item-img" src="./src/assets/images/homeType3.svg" alt="на ведущую ось">
                   <h2 class="type-choice-list-item-title title3">НА ВЕДУЩУЮ ОСЬ</h2>
                 </li>
               </a>
-              <a href="/">
+              <a href="/catalog/trailer">
                 <li class="type-choice-list-item">
                   <img class="type-choice-list-item-img" src="./src/assets/images/homeType4.svg" alt="на прицепную ось">
                   <h2 class="type-choice-list-item-title title3">НА ПРИЦЕПНУЮ ОСЬ</h2>
@@ -259,36 +264,84 @@
       <section class="catalog" id="catalog">
         <div class="container">
           <p class="path contacts-path title4"><a class="path-link" href="/">Главная — </a>Каталог</p>
+          <!-- 
+          <div class="catalog-item-main">
+            <img class="catalog-item-main-img" src="./src/assets/images/Tyres/longhaul/all/s02.svg" alt="">
+            <div class="catalog-item-main-info">
+              <h2 class="title1 catalog-item-main-title">S 02</h2>
+              <p class="catalog-item-main-desc title4">Как и большинство других моделей, грузовая шина Kapsen S02
+                отличается
+                достаточно узкой сферой применения, будучи
+                предназначенной для эксплуатации на рулевой оси магистральных тягачей.
+                Именно поэтому данная модель характеризуется коротким тормозным путем на мокрой дороге, отличной
+                курсовой устойчивостью,
+                низким сопротивлением качению и продолжительным сроком службы.</p>
+            </div>
 
-          <ul class="catalog-list">
-            <li class="catalog-list-item">
-              <img src="./src/assets/images/catalog1.svg" alt="">
-              <div class="catalog-list-item-block">
-                <button class="catalog-list-item-btn title3">
-                  ПОДРОБНЕЕ
-                </button>
-                <h3 class="catalog-list-item-title">HS109</h3>
-              </div>
-            </li>
-            <li class="catalog-list-item">
-              <img class="centered" src="./src/assets/images/catalog2.svg" alt="">
-              <div class="catalog-list-item-block">
-                <button class="catalog-list-item-btn title3">
-                  ПОДРОБНЕЕ
-                </button>
-                <h3 class="catalog-list-item-title">S02</h3>
-              </div>
-            </li>
-            <li class="catalog-list-item">
-              <img src="./src/assets/images/catalog3.svg" alt="">
-              <div class="catalog-list-item-block">
-                <button class="catalog-list-item-btn title3">
-                  ПОДРОБНЕЕ
-                </button>
-                <h3 class="catalog-list-item-title">KM220</h3>
-              </div>
-            </li>
-          </ul>
+          </div>
+
+          <div class="catalog-item-table">
+            <div class="catalog-item-table-row title4 catalog-item-table-row-thead">
+              <p>Размер</p>
+              <p>Норма слойности</p>
+              <p>Стандартный колесный&nbsp;диск</p>
+              <p>Индекс нагрузки</p>
+              <p>Наружный диаметр&nbsp;(mm)</p>
+              <p>Ширина шины&nbsp;(mm)</p>
+              <p>Максимальная нагрузка&nbsp;(kg)
+                одинарная&nbsp;/&nbsp;двойная</p>
+              <p>Максимальное
+                давление&nbsp;(KPA)</p>
+              <p>Цена</p>
+            </div>
+
+            <div class="catalog-item-table-row title4 ">
+              <p>7.50R16LT</p>
+              <p>14</p>
+              <p>6.00G</p>
+              <p>122/118L</p>
+              <p>805</p>
+              <p>215</p>
+              <p>1500/1320</p>
+              <p>770</p>
+              <p>15 000₽</p>
+            </div>
+            <div class="catalog-item-table-row title4 ">
+              <p>7.50R16LT</p>
+              <p>14</p>
+              <p>6.00G</p>
+              <p>122/118L</p>
+              <p>805</p>
+              <p>215</p>
+              <p>1500/1320</p>
+              <p>770</p>
+              <p>15 000₽</p>
+            </div>
+            <div class="catalog-item-table-row title4 ">
+              <p>7.50R16LT</p>
+              <p>14</p>
+              <p>6.00G</p>
+              <p>122/118L</p>
+              <p>805</p>
+              <p>215</p>
+              <p>1500/1320</p>
+              <p>770</p>
+              <p>15 000₽</p>
+            </div>
+            <div class="catalog-item-table-row title4 ">
+              <p>7.50R16LT</p>
+              <p>14</p>
+              <p>6.00G</p>
+              <p>122/118L</p>
+              <p>805</p>
+              <p>215</p>
+              <p>1500/1320</p>
+              <p>770</p>
+              <p>15 000₽</p>
+            </div>
+          </div> -->
+
+          <ul class="catalog-list" id="catalog-list"></ul>
         </div>
       </section>
       <!-- корзина -->
@@ -298,13 +351,13 @@
         </div>
       </section>
 
-      <!-- универсальные -->
-      <!-- <section class="universal" id="universal">
+      <!-- отфильтрованный каталог -->
+      <section class="catalogFilter" id="catalogFilter">
         <div class="container">
-          <p class="path contacts-path title4"><a class="path-link" href="/">Главная — </a><a class="path-link"
-              href="/">Каталог — </a>Универсальные</p>
+          <!-- <p class="path contacts-path title4"><a class="path-link" href="/">Главная — </a><a class="path-link"
+              href="/">Каталог — </a>Универсальные</p> -->
         </div>
-      </section> -->
+      </section>
 
     </main>
 

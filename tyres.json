@@ -1,0 +1,1018 @@
+{
+  "tyres": [
+    {
+      "name": "S01",
+      "description": "Оптимизированная формула резины протектора позволяет повысить износостойкость; Применение материалов с армированными частицами и технологии высокой устойчивости позволяет уменьшить тепловыделение и потерю энергии между полимерными цепями при трении экструзии, а также добиться низкого сопротивления качению и эффективной экономии масла; Технология равномерного заземления предотвращает антиэксцентрический износ и уменьшает неравномерный износ; Применение передовой международной технологии динамической балансировки для предотвращения вибрации шин и дискомфорта на высокой скорости; Хорошая топливная и энергосберегающая производительность; Хорошая динамическая балансировка, противозадирный и противоэксцентриковый износ.",
+      "img": "./src/assets/images/Tyres/longhaul/all/s01.svg",
+      "road": "longhaul",
+      "position": "all",
+      "sizes": [
+        {
+          "size": "12R22.5",
+          "PR": "18",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "152/149M",
+          "outerDiameter": "1084",
+          "sectionWidth": "300",
+          "maxLoad": "3550/3250",
+          "maxPressure": "930",
+          "price": "10000"
+        },
+        {
+          "size": "315/80R22.5",
+          "PR": "20",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "157/153ML",
+          "outerDiameter": "1076",
+          "sectionWidth": "312",
+          "maxLoad": "4125/3650",
+          "maxPressure": "860"
+        }
+      ]
+    },
+    {
+      "name": "S02",
+      "description": "Утонченная модель шин. Специальные детали линии протектора улучшают сцепление на мокрой дороге, а также обеспечивают безопасность, комфорт и экономию топлива; Конструкция из четырех продольных прямых канав обладает отличными направляющими, дренажными и противоскользящими свойствами; Формула протектора с высокой износостойкостью и четырехслойная конструкция ремня безопасности позволяют увеличить дальность движения по всем направлениям, а расширенное плечо снижает скорость изнашивания; Применение передовой международной технологии динамической балансировки позволяет предотвратить тряску и дискомфорт на высокой скорости; Хорошая топливная и энергосберегающая производительность; Хорошая динамическая балансировка, противозадирный и противоэксцентриковый износ.",
+      "img": "./src/assets/images/Tyres/longhaul/all/s02.svg",
+      "road": "longhaul",
+      "position": "all",
+      "sizes": [
+        {
+          "size": "7.50R16LT",
+          "PR": "14",
+          "standartRim": "6.00G",
+          "loadIndexSpeedRating": "122/118L",
+          "outerDiameter": "805",
+          "sectionWidth": "215",
+          "maxLoad": "1500/1320",
+          "maxPressure": "770",
+          "price": "10000"
+        },
+        {
+          "size": "8R22.5",
+          "PR": "14",
+          "standartRim": "6.00",
+          "loadIndexSpeedRating": "130/128M",
+          "outerDiameter": "935",
+          "sectionWidth": "170",
+          "maxLoad": "1900/180",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        {
+          "size": "9R22.5",
+          "PR": "14",
+          "standartRim": "6.75",
+          "loadIndexSpeedRating": "136/134M",
+          "outerDiameter": "974",
+          "sectionWidth": "185",
+          "maxLoad": "2240/2120",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        {
+          "size": "10R22.5",
+          "PR": "16",
+          "standartRim": "7.50",
+          "loadIndexSpeedRating": "144/142L",
+          "outerDiameter": "1019",
+          "sectionWidth": "200",
+          "maxLoad": "2800/2650",
+          "maxPressure": "900",
+          "price": "10000"
+        },
+        {
+          "size": "11R22.5",
+          "PR": "16",
+          "standartRim": "9.25",
+          "loadIndexSpeedRating": "146/143M",
+          "outerDiameter": "1054",
+          "sectionWidth": "279",
+          "maxLoad": "3000/2725",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        {
+          "size": "275/80R22.5",
+          "PR": "18",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "149/146K",
+          "outerDiameter": "1012",
+          "sectionWidth": "276",
+          "maxLoad": "3250/3000",
+          "maxPressure": "900",
+          "price": "10000"
+        },
+        {
+          "size": "295/80R22.5",
+          "PR": "18",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "152/149M",
+          "outerDiameter": "1044",
+          "sectionWidth": "298",
+          "maxLoad": "3550/3250",
+          "maxPressure": "900",
+          "price": "10000"
+        },
+        {
+          "size": "315/80R22.5",
+          "PR": "20",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "157/153L",
+          "outerDiameter": "1076",
+          "sectionWidth": "312",
+          "maxLoad": "4125/4650",
+          "maxPressure": "860",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "S09",
+      "description": "Гибридный рисунок и специальная супер износостойкая формула в сочетании с комбинированной технологией обеспечивают превосходную стойкость к порезам и блокировке при использовании на бездорожье, а также превосходную износостойкость при использовании на автомагистрали; Использование конструкции V-образной формы с большим углом наклона и валунов предотвращает повреждение камнями дна канавки, ремней безопасности, а также преждевременный износ шин; Ступенчатые плечи и дизайн модели способствуют отводу тепла и предотвращают частичный износ; Хорошая топливная и энергосберегающая производительность; Хорошая динамическая балансировка, устойчивость к частичному износу.",
+      "img": "./src/assets/images/Tyres/onoffroad/steer/s09.svg",
+      "road": "onoffroad",
+      "position": "steer",
+      "sizes": [
+        {
+          "size": "11R22.5",
+          "PR": "16",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "146/143K",
+          "outerDiameter": "1054",
+          "sectionWidth": "279",
+          "maxLoad": "3000/2725",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        {
+          "size": "12R22.5",
+          "PR": "18",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "152/149M",
+          "outerDiameter": "1084",
+          "sectionWidth": "300",
+          "maxLoad": "2550/3250",
+          "maxPressure": "930",
+          "price": "10000"
+        },
+        {
+          "size": "13R22.5",
+          "PR": "18",
+          "standartRim": "9.75",
+          "loadIndexSpeedRating": "154/151K",
+          "outerDiameter": "1124",
+          "sectionWidth": "320",
+          "maxLoad": "3750/3450",
+          "maxPressure": "850",
+          "price": "10000"
+        },
+        {
+          "size": "295/80R22.5",
+          "PR": "18",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "152/149L",
+          "outerDiameter": "1044",
+          "sectionWidth": "298",
+          "maxLoad": "3550/3250",
+          "maxPressure": "900",
+          "price": "10000"
+        },
+        {
+          "size": "315/80R22.5",
+          "PR": "20",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "157/153L",
+          "outerDiameter": "1076",
+          "sectionWidth": "312",
+          "maxLoad": "4125/3650",
+          "maxPressure": "860",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "S06",
+      "description": "Конструкция из четырех продольных прямых канавок имеет отличные направляющие и дренажные характеристики; боковые и небольшие стальные канавки улучшают сцепление и противоскользящие свойства шины; Технология равномерного заземления предотвращает частичный износ и снижает неэффективный износ;Использование конструкции для удаления камней эффективно защищает основание протектора, предотвращает попадание камней, повышает устойчивость коронки к проколам, защищает каркас, снижает частоту отказов и продлевает срок службы шины; Применение передовой международной технологии динамической балансировки позволяет предотвратить тряску на высокой скорости; Низкое сопротивление качению, хорошая топливная и энергосберегающая производительность; Хорошая динамическая балансировка, устойчивость к частичному износу.",
+      "img": "./src/assets/images/Tyres/longhaul/all/s06.svg",
+      "road": "longhaul",
+      "position": "all",
+      "sizes": [
+        {
+          "size": "12R22.5",
+          "PR": "18",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "152/149L",
+          "outerDiameter": "1085",
+          "sectionWidth": "300",
+          "maxLoad": "3550/3250",
+          "maxPressure": "930",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "S16",
+      "description": "Применение зигзагообразной Z-образной продольной канавки в середине и вертикальных прямых крючков с обеих сторон конструкции обеспечивают движущую силу шины, одновременно повышая управляемость шины, так что шину можно использовать при любом положении колеса; Применение усовершенствованной формулы устойчивости к износу наделяет эту модель высоким пробегом и способствует сверхэкономичности.",
+      "img": "./src/assets/images/Tyres/onoffroad/steer/s16.svg",
+      "road": "onoffroad",
+      "position": "steer",
+      "sizes": [
+        {
+          "size": "315/80R22.5",
+          "PR": "20",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "157/153L",
+          "outerDiameter": "1076",
+          "sectionWidth": "312",
+          "maxLoad": "4125/3750",
+          "maxPressure": "860",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS17",
+      "description": "Модельный ряд предназначен для передвигающихся на короткие расстояния и с низкой скоростью грузовых автомобилей в портах, на строительных заводах, горнодобывающих и лесистых районах; Специальный рисунок протектора и широкий угол обеспечивают лучшую износостойкость; Большой рисунок протектора и специальная антипрокольная формула обеспечивают превосходную устойчивость к порезам, износостойкость и сцепные свойства; Круглые дуги на дне канавки, предотвращающие его растрескивание и улучшающие отвод воды и грязи.",
+      "img": "./src/assets/images/Tyres/offroad/drive/hs17.svg",
+      "road": "offroad",
+      "position": "drive",
+      "sizes": [
+        {
+          "size": "11R22.5",
+          "PR": "16",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "146/143K",
+          "outerDiameter": "154",
+          "sectionWidth": "279",
+          "maxLoad": "3000/2725",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        {
+          "size": "11R24.5",
+          "PR": "16",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "149/146F",
+          "outerDiameter": "1104",
+          "sectionWidth": "279",
+          "maxLoad": "3250/3000",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        {
+          "size": "12R22.5",
+          "PR": "18",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "152/149F",
+          "outerDiameter": "1085",
+          "sectionWidth": "300",
+          "maxLoad": "3550/3250",
+          "maxPressure": "930",
+          "price": "10000"
+        },
+        {
+          "size": "295/80R22.5",
+          "PR": "18",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "152/149M",
+          "outerDiameter": "1044",
+          "sectionWidth": "298",
+          "maxLoad": "3550/3250",
+          "maxPressure": "900",
+          "price": "10000"
+        },
+        {
+          "size": "12.00R20",
+          "PR": "20",
+          "standartRim": "8.50",
+          "loadIndexSpeedRating": "156/153K",
+          "outerDiameter": "1125",
+          "sectionWidth": "315",
+          "maxLoad": "4000/3650",
+          "maxPressure": "900",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS278",
+      "description": "",
+      "img": "./src/assets/images/Tyres/onoffroad/steer/hs278.svg",
+      "road": "onoffroad",
+      "position": "steer",
+      "sizes": [
+        {
+          "size": "315/80R22.5",
+          "PR": "20",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "157/153L",
+          "outerDiameter": "1076",
+          "sectionWidth": "312",
+          "maxLoad": "4125/3750",
+          "maxPressure": "860",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS298",
+      "description": " Характеристика модели: Высокая износостойкость, отличная теплоотдача, хорошая управляемость и тяга, высокий эксплуатационный пробег, отличная топливная эффективность. Соответствующие условия: Подходит для полноприводных транспортных средств среднего/дальней протяженности, движущихся по смешанным покрытиям.",
+      "img": "./src/assets/images/Tyres/onoffroad/all/hs298.svg",
+      "road": "onoffroad",
+      "position": "all",
+      "sizes": [
+        {
+          "size": "9.00R20",
+          "PR": "16",
+          "standartRim": "7.00",
+          "loadIndexSpeedRating": "144/142K",
+          "outerDiameter": "1018",
+          "sectionWidth": "260",
+          "maxLoad": "2800/2650",
+          "maxPressure": "900",
+          "price": "10000"
+        },
+        {
+          "size": "10.00R20",
+          "PR": "18",
+          "standartRim": "7.50",
+          "loadIndexSpeedRating": "149/146K",
+          "outerDiameter": "1049",
+          "sectionWidth": "276",
+          "maxLoad": "3250/3000",
+          "maxPressure": "930",
+          "price": "10000"
+        },
+        {
+          "size": "11.00R20",
+          "PR": "18",
+          "standartRim": "8.00",
+          "loadIndexSpeedRating": "152/149K",
+          "outerDiameter": "1085",
+          "sectionWidth": "293",
+          "maxLoad": "3550/3250",
+          "maxPressure": "930",
+          "price": "10000"
+        },
+        {
+          "size": "12.00R20",
+          "PR": "20",
+          "standartRim": "8.50",
+          "loadIndexSpeedRating": "156/153K",
+          "outerDiameter": "1125",
+          "sectionWidth": "315",
+          "maxLoad": "4000/3650",
+          "maxPressure": "900",
+          "price": "10000"
+        },
+        {
+          "size": "12R22.5",
+          "PR": "18",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "152/149M",
+          "outerDiameter": "1082",
+          "sectionWidth": "289",
+          "maxLoad": "3550/3250",
+          "maxPressure": "930",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS201",
+      "description": "Характеристика модели: Подходит для средне- и дальнемагистральных транспортных средств, работающих на дорогах высокого класса. Обладает отличными характеристиками защиты боковин от царапин при нагрузке. Соответствующие условия: Подходит для использования в положении рулевого управления/прицепа при движении по дальнемагистральным и шоссейным дорогам.",
+      "img": "./src/assets/images/Tyres/longhaul/trailer/hs201.svg",
+      "road": "longhaul",
+      "position": "trailer",
+      "sizes": [
+        {
+          "size": "315/70R22.5",
+          "PR": "20",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "154/150M",
+          "outerDiameter": "1015",
+          "sectionWidth": "330",
+          "maxLoad": "3750/3350",
+          "maxPressure": "900",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS101",
+      "description": "Характеристика модели: Специально разработанная конструкция обеспечивает сопротивление разрыву, высокую износостойкость и грузоподъемность, низкое сопротивление качению и уровню шума, а также теплоизлучение и стабильность направления. Соответствующие условия: Подходит для использования в положении рулевого управления/прицепа для грузовых автомобилей и автобусов, движущихся по высококачественным дорогам.",
+      "img": "./src/assets/images/Tyres/longhaul/steer/hs101.svg",
+      "road": "longhaul",
+      "position": "steer",
+      "sizes": [
+        {
+          "size": "11R22.5",
+          "PR": "16",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "146/143M",
+          "outerDiameter": "1054",
+          "sectionWidth": "279",
+          "maxLoad": "3000/2725",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        {
+          "size": "12R22.5",
+          "PR": "18",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "152/149M",
+          "outerDiameter": "1085",
+          "sectionWidth": "289",
+          "maxLoad": "3550/3250",
+          "maxPressure": "930",
+          "price": "10000"
+        },
+        {
+          "size": "295/80R22.5",
+          "PR": "18",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "152/149M",
+          "outerDiameter": "1044",
+          "sectionWidth": "298",
+          "maxLoad": "3550/3250",
+          "maxPressure": "900",
+          "price": "10000"
+        },
+        {
+          "size": "315/80R22.5",
+          "PR": "20",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "157/153L",
+          "outerDiameter": "1076",
+          "sectionWidth": "310",
+          "maxLoad": "4125/3650",
+          "maxPressure": "860",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS109",
+      "description": " Характеристика модели: Низкое тепловыделение, отличная характеристика управления на высоких скоростях. Соответствующие условия: Подходит для использования в положении рулевого управления/прицепа транспортных средств, движущихся по шоссе и автомагистрали. ",
+      "img": "./src/assets/images/Tyres/longhaul/steer/hs109.svg",
+      "road": "longhaul",
+      "position": "steer",
+      "sizes": [
+        {
+          "name": "315/80R22.5",
+          "PR": "20",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "157/153L",
+          "outerDiameter": "1069",
+          "sectionWidth": "310",
+          "maxLoad": "4125/3650",
+          "maxPressure": "860",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS258",
+      "description": "◦ Характеристика модели: Четыре прямые канавки обеспечивают превосходные тормозные и ходовые условия. Соответствующие условия: Подходит для использования в положении рулевого управления/прицепа для транспортных средств среднего/дальней протяженности, движущихся по дорогам с хорошим покрытием. ",
+      "img": "./src/assets/images/Tyres/longhaul/steer/hs258.svg",
+      "road": "longhaul",
+      "position": "steer",
+      "sizes": [
+        {
+          "size": "11.00R20",
+          "PR": "18",
+          "standartRim": "8.00",
+          "loadIndexSpeedRating": "152/149K",
+          "outerDiameter": "1085",
+          "sectionWidth": "293",
+          "maxLoad": "3550/3250",
+          "maxPressure": "930",
+          "price": "1000"
+        }
+      ]
+    },
+    {
+      "name": "HS259",
+      "description": "◦ Характеристика модели:4 прямые канавки могут обеспечивают превосходные свойства торможения, управления, сцепления с землей, а также устойчивость к мокрому скольжению и износостойкость. Соответствующие условия: Подходит для использования в положении рулевого управления/прицепа для грузовых автомобилей среднего/дальней протяженности, движущихся по высококачественным дорогам. ",
+      "img": "./src/assets/images/Tyres/longhaul/steer/hs259.svg",
+      "road": "longhaul",
+      "position": "steer",
+      "sizes": [
+        {
+          "size": "11.00R20",
+          "PR": "18",
+          "standartRim": "8.00",
+          "loadIndexSpeedRating": "152/149K",
+          "outerDiameter": "1085",
+          "sectionWidth": "293",
+          "maxLoad": "2550/3250",
+          "maxPressure": "930",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS303",
+      "description": "◦ Характеристика модели:4 прямые канавки могут обеспечивают превосходные свойства торможения и управления. Соответствующие условия: Подходит для использования в положении рулевого управления/прицепа для транспортных средств ",
+      "img": "./src/assets/images/Tyres/longhaul/steer/hs303.svg",
+      "road": "longhaul",
+      "position": "steer",
+      "sizes": [
+        {
+          "size": "295/80R22.5",
+          "PR": "18",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "152/149M",
+          "outerDiameter": "1042",
+          "sectionWidth": "298",
+          "maxLoad": "3550",
+          "maxPressure": "3250",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS102",
+      "description": "Характеристика модели: Смешанный рисунок протектора обеспечивают прочное сцепление и тормозную тягу. Удлиненный рисунок протектора (пять глубоких канавок, несколько блоков и мелкие пропилы) повышает устойчивость к эксцентричному и аномальному износам. Соответствующие условия: Подходит для использования в положении ведущего колеса; не подходит для управления грузовыми автомобилями на короткие/средние дистанции, движущихся по дорогам с хорошим покрытием. ",
+      "img": "./src/assets/images/Tyres/longhaul/drive/hs102.svg",
+      "road": "longhaul",
+      "position": "drive",
+      "sizes": [
+        {
+          "size": "315/80R22.5",
+          "PR": "20",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "157/153L",
+          "outerDiameter": "1082",
+          "sectionWidth": "310",
+          "maxLoad": "4125/3650",
+          "maxPressure": "860",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS103",
+      "description": "Характеристика модели: Технология TMS и специальный состав обеспечивают плавный износа протектора. Специальный блочный рисунок протектора гарантирует противоэксцентриковый износ.Соответствующие условия: Подходит для использования в положении ведущего колеса для транспортных средств среднего/дальней протяженности, движущихся по дорогам с хорошим покрытием.",
+      "img": "./src/assets/images/Tyres/longhaul/drive/hs103.svg",
+      "road": "longhaul",
+      "position": "drive",
+      "sizes": [
+        {
+          "size": "11R22.5",
+          "PR": "16",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "146/143M",
+          "outerDiameter": "1065",
+          "sectionWidth": "279",
+          "maxLoad": "3000/2725",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        {
+          "size": "12R22.5",
+          "PR": "18",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "152/149M",
+          "outerDiameter": "1096",
+          "sectionWidth": "289",
+          "maxLoad": "3550/3250",
+          "maxPressure": "930",
+          "price": "10000"
+        },
+        {
+          "size": "295/80R22.5",
+          "PR": "18",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "152/149M",
+          "outerDiameter": "1050",
+          "sectionWidth": "298",
+          "maxLoad": "3550/3250",
+          "maxPressure": "900",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS107",
+      "description": "Характеристика модели: Специально разработанный рисунок протектора обеспечивает износостойкость, низкое тепловыделение, прочное сцепление и тормозную тягу, высокий эксплуатационный пробег. Смешанный рисунок протектора обеспечивают прочное сцепление и тормозную тягу, отличную управляемость и водонепроницаемость. Соответствующие условия: Подходит для управления грузовыми автомобилями средней/дальней протяженности, движущихся по высококачественным дорогам, по дорогам с хорошим покрытием. ",
+      "img": "./src/assets/images/Tyres/longhaul/drive/hs107.svg",
+      "road": "longhaul",
+      "position": "drive",
+      "sizes": [
+        {
+          "size": "12R22.5",
+          "PR": "18",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "152/149M",
+          "outerDiameter": "1092",
+          "sectionWidth": "289",
+          "maxLoad": "3550/3250",
+          "maxPressure": "930",
+          "price": "10000"
+        },
+        {
+          "size": "13R22.5",
+          "PR": "18",
+          "standartRim": "9.75",
+          "loadIndexSpeedRating": "154/151L",
+          "outerDiameter": "1124",
+          "sectionWidth": "320",
+          "maxLoad": "3750/3450",
+          "maxPressure": "850",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS202",
+      "description": "◦ Характеристика модели: Смешанный рисунок протектора обеспечивают прочное сцепление и тормозную тягу. Удлиненный рисунок протектора (пять глубоких канавок, несколько блоков и мелкие пропилы) повышает устойчивость к эксцентричному и аномальному износам. Соответствующие условия: Подходит для использования в положении ведущего колеса при условии хорошего дорожного состояния. ",
+      "img": "./src/assets/images/Tyres/longhaul/drive/hs202.svg",
+      "road": "longhaul",
+      "position": "drive",
+      "sizes": [
+        {
+          "name": "295/80R22.5",
+          "PR": "18",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "152/149M",
+          "outerDiameter": "1044",
+          "sectionWidth": "298",
+          "maxLoad": "3550/3250",
+          "maxPressure": "900",
+          "price": "10000"
+        },
+        {
+          "name": "315/70R22.5",
+          "PR": "20",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "154/150M",
+          "outerDiameter": "1025",
+          "sectionWidth": "330",
+          "maxLoad": "3750/3350",
+          "maxPressure": "900",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS207",
+      "description": "Характеристика модели: Подходит для использования в положении ведущего колеса прицепа, передвигающегося по шоссе, автомагистрали и проселочным дорогам. Имеет защиту от трещин, хорошую стойкость к износу, защиту от проколов, прочное сцепление и тормозную тягу. Углубленный и расширенный рисунок протектора увеличивает пройденный диапазон и улучшает приспособляемость рулевого колеса и колеса прицепа к плохим дорогам. Соответствующие условия: Подходит для управления автобусами и грузовыми автомобилями, движущихся по шоссе и дорогам общего пользования.",
+      "img": "./src/assets/images/Tyres/longhaul/drive/hs207.svg",
+      "road": "longhaul",
+      "position": "drive",
+      "sizes": {
+        "11R22.5": {
+          "PR": "16",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "146/143M",
+          "outerDiameter": "1054",
+          "sectionWidth": "279",
+          "maxLoad": "3000/2725",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        "11R24.5": {
+          "PR": "16",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "149/146M",
+          "outerDiameter": "1110",
+          "sectionWidth": "277",
+          "maxLoad": "3250/3000",
+          "maxPressure": "830",
+          "price": "10000"
+        }
+      }
+    },
+    {
+      "name": "HS208",
+      "description": "Характеристика модели: Увеличение ширины протектора обеспечивает отличную управляемость, сцепление с дорогой и длительный срок эксплуатации. Закрытая плечевая зона протектора обеспечивает устойчивость к неравномерному износу и трещинам. Соответствующие условия: Подходит для всех видов эксплуатации, а также для автобусов при условии хорошего дорожного состояния.",
+      "img": "./src/assets/images/Tyres/longhaul/drive/hs208.svg",
+      "road": "longhaul",
+      "position": "drive",
+      "sizes": [
+        {
+          "size": "11R22.5",
+          "PR": "16",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "146/143M",
+          "outerDiameter": "1057",
+          "sectionWidth": "279",
+          "maxLoad": "3000/2725",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        {
+          "size": "11R24.5",
+          "PR": "16",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "149/146M",
+          "outerDiameter": "1108",
+          "sectionWidth": "277",
+          "maxLoad": "3250/3000",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        {
+          "size": "285/75R24.5",
+          "PR": "16",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "147/144L",
+          "outerDiameter": "1055",
+          "sectionWidth": "285",
+          "maxLoad": "3075/2800",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        {
+          "size": "295/75R22.5",
+          "PR": "16",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "146/143L",
+          "outerDiameter": "1016",
+          "sectionWidth": "302",
+          "maxLoad": "3000/2725",
+          "maxPressure": "830",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS716",
+      "description": "◦ Характеристика модели: Отличная грузоподъемность и износостойкость, устойчивость к разрыву резины. Подходит для транспортных средств, движущихся по грунтовым дорогам, и транспортных средствах средней/дальней протяженности. Соответствующие условия: Положение привода. Высококачественная дорога. ",
+      "img": "./src/assets/images/Tyres/longhaul/drive/hs716.svg",
+      "road": "longhaul",
+      "position": "drive",
+      "sizes": [
+        {
+          "size": "11.00R20",
+          "PR": "18",
+          "standartRim": "8.00",
+          "loadIndexSpeedRating": "152/149K",
+          "outerDiameter": "1082",
+          "sectionWidth": "293",
+          "maxLoad": "3550/3250",
+          "maxPressure": "930",
+          "price": "10000"
+        },
+        {
+          "size": "12R22.5",
+          "PR": "18",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "152/149M",
+          "outerDiameter": "1085",
+          "sectionWidth": "289",
+          "maxLoad": "3550/3250",
+          "maxPressure": "930",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS206",
+      "description": "Характеристика модели: Высокая износостойкость и производительность. Соответствующие условия: Подходит для прицепа автобусов и грузовых автомобилей, движущихся по шоссе.",
+      "img": "./src/assets/images/Tyres/longhaul/trailer/hs206.svg",
+      "road": "longhaul",
+      "position": "trailer",
+      "sizes": [
+        {
+          "size": "7.50R16LT",
+          "PR": "14",
+          "standartRim": "6.00G",
+          "loadIndexSpeedRating": "122/118L",
+          "outerDiameter": "801",
+          "sectionWidth": "216",
+          "maxLoad": "1500/1320",
+          "maxPressure": "770",
+          "price": "10000"
+        },
+        {
+          "size": "9.5R17.5",
+          "PR": "18",
+          "standartRim": "6.75",
+          "loadIndexSpeedRating": "143/141M",
+          "outerDiameter": "845",
+          "sectionWidth": "241",
+          "maxLoad": "2725/2557",
+          "maxPressure": "930",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS18",
+      "description": "Характеристика модели: Усиленный ремень и конструкция корпуса повышают грузоподъемность. Специальный состав протектора обеспечивает высокую устойчивость к порезам. Соответствующие условия: Подходит для всех видов эксплуатации при условии хорошего дорожного покрытия или грунтовых дорогах.",
+      "img": "./src/assets/images/Tyres/onoffroad/all/hs18.svg",
+      "road": "onoffroad",
+      "position": "all",
+      "sizes": [
+        {
+          "sizes": "12.00R24",
+          "PR": "20",
+          "standartRim": "8.50",
+          "loadIndexSpeedRating": "160/157K",
+          "outerDiameter": "1226",
+          "sectionWidth": "313",
+          "maxLoad": "4500/4125",
+          "maxPressure": "900",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS205",
+      "description": "◦ Характеристика модели: Улучшенный рисунок протектора, высокая эксцентриковая износостойкость, низкое сопротивление качению, экономичный расход топлива, отличная управляемость. ◦ Соответствующие условия: Подходит для использования в положении рулевого управления/прицепа для перевозок на большие расстояния по высококачественным дорогам.",
+      "img": "./src/assets/images/Tyres/longhaul/steer/hs205.svg",
+      "road": "longhaul",
+      "position": "steer",
+      "sizes": [
+        {
+          "size": "11R22.5",
+          "PR": "16",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "146/143M",
+          "outerDiameter": "1054",
+          "sectionWidth": "279",
+          "maxLoad": "3000/2725",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        {
+          "size": "11R24.5",
+          "PR": "16",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "149/146M",
+          "outerDiameter": "1098",
+          "sectionWidth": "277",
+          "maxLoad": "3250/3000",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        {
+          "size": "205/75R17.5",
+          "PR": "16",
+          "standartRim": "6.00",
+          "loadIndexSpeedRating": "124/122M",
+          "outerDiameter": "750",
+          "sectionWidth": "213",
+          "maxLoad": "1600/1500",
+          "maxPressure": "750",
+          "price": "10000"
+        },
+        {
+          "size": "215/75R17.5",
+          "PR": "16",
+          "standartRim": "6.00",
+          "loadIndexSpeedRating": "126/124M",
+          "outerDiameter": "759",
+          "sectionWidth": "214",
+          "maxLoad": "1700/1600",
+          "maxPressure": "700",
+          "price": "10000"
+        },
+        {
+          "size": "225/70R19.5",
+          "PR": "16",
+          "standartRim": "6.75",
+          "loadIndexSpeedRating": "128/126M",
+          "outerDiameter": "812",
+          "sectionWidth": "230",
+          "maxLoad": "1800/1700",
+          "maxPressure": "760",
+          "price": "10000"
+        },
+        {
+          "size": "235/75R17.5",
+          "PR": "16",
+          "standartRim": "6.75",
+          "loadIndexSpeedRating": "132/130M",
+          "outerDiameter": "790",
+          "sectionWidth": "232",
+          "maxLoad": "2000/1900",
+          "maxPressure": "775",
+          "price": "10000"
+        },
+        {
+          "size": "245/70R19.5",
+          "PR": "16",
+          "standartRim": "7.50",
+          "loadIndexSpeedRating": "136/134M",
+          "outerDiameter": "835",
+          "sectionWidth": "252",
+          "maxLoad": "2180/2060",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        {
+          "size": "255/70R22.5",
+          "PR": "16",
+          "standartRim": "7.50",
+          "loadIndexSpeedRating": "140/137M",
+          "outerDiameter": "931",
+          "sectionWidth": "260",
+          "maxLoad": "2500/2300",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        {
+          "size": "265/70R19.5",
+          "PR": "16",
+          "standartRim": "7.50",
+          "loadIndexSpeedRating": "140/138M",
+          "outerDiameter": "862",
+          "sectionWidth": "266",
+          "maxLoad": "2500/2360",
+          "maxPressure": "775",
+          "price": "10000"
+        },
+        {
+          "size": "275/70R22.5",
+          "PR": "16",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "148/145M",
+          "outerDiameter": "958",
+          "sectionWidth": "280",
+          "maxLoad": "3150/2900",
+          "maxPressure": "900",
+          "price": "10000"
+        },
+        {
+          "size": "285/75R24.5",
+          "PR": "16",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "147/144L",
+          "outerDiameter": "1055",
+          "sectionWidth": "285",
+          "maxLoad": "3075/2800",
+          "maxPressure": "830",
+          "price": "10000"
+        },
+        {
+          "size": "295/75R22.5",
+          "PR": "16",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "146/143L",
+          "outerDiameter": "1008",
+          "sectionWidth": "302",
+          "maxLoad": "3000/2725",
+          "maxPressure": "830",
+          "price": "10000"
+        }
+      ]
+    },
+    {
+      "name": "HS219",
+      "description": "◦ Характеристика модели: Высокая износостойкость и экономичность. Отличные противоскользящие и дренажные свойства, высокая управляемость. ◦ Соответствующие условия: Подходит для управления автобусами и грузовыми автомобилями, движущихся по шоссе. ",
+      "img": "./src/assets/images/Tyres/longhaul/steer/hs219.svg",
+      "road": "longhaul",
+      "position": "steer",
+      "sizes": [
+        {
+          "size": "11R22.5",
+          "PR": "14",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "144/142M",
+          "outerDiameter": "1037",
+          "sectionWidth": "279",
+          "maxLoad": "2800/2650",
+          "maxPressure": "720",
+          "price": "10000"
+        },
+        {
+          "size": "11R24.5",
+          "PR": "16",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "149/146M",
+          "outerDiameter": "1088",
+          "sectionWidth": "277",
+          "maxLoad": "3000/2725",
+          "maxPressure": "720",
+          "price": "10000"
+        },
+        {
+          "size": "285/75R24.5",
+          "PR": "14",
+          "standartRim": "8.25",
+          "loadIndexSpeedRating": "144/141L",
+          "outerDiameter": "1034",
+          "sectionWidth": "285",
+          "maxLoad": "2800/2575",
+          "maxPressure": "760",
+          "price": "10000"
+        },
+        {
+          "size": "295/75R22.5",
+          "PR": "14",
+          "standartRim": "9.00",
+          "loadIndexSpeedRating": "144/141L",
+          "outerDiameter": "998",
+          "sectionWidth": "304",
+          "maxLoad": "2800/2575",
+          "maxPressure": "760",
+          "price": "10000"
+        }
+      ]
+    }
+  ]
+}

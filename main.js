@@ -1,4 +1,6 @@
 import './style.css'
+import catalog from './src/assets/js/catalog';
+
 
 const applyFooter = document.querySelector('.apply-btn');
 const modal = document.querySelector('.modal')
@@ -50,12 +52,18 @@ applyForm.addEventListener('submit', (ev) => {
 
 const heroTitle = document.querySelector('.hero-title')
 const heroImg = document.querySelector('.hero-img')
-
+const loader = document.querySelector('.loader')
 document.addEventListener('DOMContentLoaded', () => {
+  // setTimeout(() => {
+  loader.classList.add('hidden');
+  changePath(window.location.pathname, window.location.pathname)
+
   setTimeout(() => {
     heroTitle.classList.add('scroll')
     heroImg.classList.add('scroll')
-  }, 2000)
+    loader.classList.add('none');
+  }, 1000)
+  // }, 5000)
 })
 
 
@@ -66,7 +74,7 @@ links.forEach(el => {
       ev.preventDefault()
 
       const prevPath = window.location.pathname;
-      history.pushState({}, 'link', el.getAttribute('href'));
+      history.pushState({ prevUrl: prevPath }, 'link', el.getAttribute('href'));
       changePath(prevPath, window.location.pathname)
     })
   }
@@ -76,16 +84,24 @@ function changePath(prevPath, path) {
   const home = document.getElementById('home');
   const selector = path.slice(1);
   const prevSelector = prevPath.slice(1);
+  console.log(prevPath)
+  console.log(path)
 
   if (path === '/' && prevPath === '/') {
+    console.log('equal main')
+
     home.classList.add('block', 'visible');
   }
 
   else if (path === prevPath) {
+    console.log('equal paths')
+
     document.getElementById(selector).classList.add('block', 'visible');
   }
 
   else if (path !== prevPath && prevPath === '/') {
+    console.log('form main')
+
     home.classList.remove('visible');
 
     setTimeout(() => {
@@ -96,6 +112,8 @@ function changePath(prevPath, path) {
   }
 
   else if (path !== prevPath && path === '/') {
+    console.log('to main')
+
     document.getElementById(prevSelector).classList.remove('visible');
     setTimeout(() => {
       home.classList.add('block')
@@ -105,15 +123,19 @@ function changePath(prevPath, path) {
   }
 
   else {
+    console.log('else')
+
+    // console.log(prevSelector)
+    // console.log(selector)
     document.getElementById(prevSelector).classList.remove('visible');
-    // setTimeout(() => {
-    document.getElementById(prevSelector).addEventListener('transitionend', () => {
+    setTimeout(() => {
+      // document.getElementById(prevSelector).addEventListener('transitionend', () => {
       document.getElementById(prevSelector).classList.remove('block')
       document.getElementById(selector).classList.add('block');
       document.getElementById(selector).classList.add('visible')
 
-    })
-    // }, 600)
+      // })
+    }, 600)
 
   }
 
@@ -128,6 +150,27 @@ function changePath(prevPath, path) {
   })
 }
 
-changePath(window.location.pathname, window.location.pathname)
+const catalogList = document.getElementById('catalog-list');
+catalogList.insertAdjacentHTML('beforeend', catalog())
+
+// window.addEventListener('popstate', () => {
+//   // console.log(document.referrer)
+//   // const url = new URL(document.referrer)
+//   // console.log(url.pathname)
+//   console.log(window.history.state)
+//   if (window.history.state == null) {
+//     changePath('/', window.location.pathname)
+//   } else {
+//     console.log(window.history.state.prevUrl)
+//     console.log(window.location.pathname)
+//     changePath(window.history.state.prevUrl, window.location.pathname)
+
+//   }
+//   // console.log(window.history.state.prevUrl)
+//   // console.log(window.location.pathname)
+//   // const prevPath = window.location.pathname;
+//   // history.pushState({}, 'link', el.getAttribute('href'));
+// })
+
 
 

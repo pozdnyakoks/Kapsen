@@ -29,6 +29,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  row-gap: 30px;
   /* gap: 48px; */
 }
 
@@ -44,6 +45,7 @@
 }
 
 .catalog-list-item img {
+  width: 40%;
   align-self: end;
 }
 

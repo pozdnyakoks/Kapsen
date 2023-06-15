@@ -8,6 +8,7 @@ h1 {
 }
 
 body {
+  background-color: var(--white);
   font-family: Inter;
   width: 100%;
   min-height: 100vh;
@@ -40,6 +41,7 @@ button {
   --red: #E74C3C;
   --white: #F1F1F1;
   --grey-light: #E6E6E6;
+  --black: #2D2C2C;
 }
 
 #app {
@@ -87,4 +89,12 @@ button {
 
 main {
   margin-bottom: auto;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.none {
+  display: none;
 }
