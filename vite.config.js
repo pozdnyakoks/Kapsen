@@ -6,7 +6,7 @@ export default {
       targets: [
         {
           src: './src/assets/images/Tyres',
-          dest: 'Tyres'
+          dest: 'assets'
         }
       ]
     })
