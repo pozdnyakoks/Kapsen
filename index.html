@@ -100,21 +100,21 @@
         <section class="choice">
           <div class="container">
             <ul class="wheel-choice-list animate">
-              <a class="wheel-choice-list-link" href="/catalog/longhaul">
+              <a class="wheel-choice-list-link" data-filter="filtered" href="/catalog/longhaul">
                 <li class="wheel-choice-list-item">
                   <img class="wheel-choice-list-item-img" src="./src/assets/images/wheel/home1.png"
                     alt="ДАЛЬНЕМАГИСТРАЛЬНЫЕ">
                   <h2 class="wheel-choice-list-item-title title2">ДАЛЬНЕМАГИСТРАЛЬНЫЕ</h2>
                 </li>
               </a>
-              <a class="wheel-choice-list-link" href="/catalog/onoffroad">
+              <a class="wheel-choice-list-link" data-filter="filtered" href="/catalog/onoffroad">
                 <li class="wheel-choice-list-item">
                   <img class="wheel-choice-list-item-img" src="./src/assets/images/wheel/home2.png"
                     alt="ДОРОГА / БЕЗДОРОЖЬЕ">
                   <h2 class="wheel-choice-list-item-title title2">ДОРОГА / БЕЗДОРОЖЬЕ</h2>
                 </li>
               </a>
-              <a class="wheel-choice-list-link" href="/catalog/offroad">
+              <a class="wheel-choice-list-link" data-filter="filtered" href="/catalog/offroad">
                 <li class="wheel-choice-list-item">
                   <img class="wheel-choice-list-item-img" src="./src/assets/images/wheel/home3.png" alt="БЕЗДОРОЖЬЕ">
                   <h2 class="wheel-choice-list-item-title title2">БЕЗДОРОЖЬЕ</h2>
@@ -125,25 +125,25 @@
             <a class="choice-more title2" href="/catalog">смотреть все</a>
 
             <ul class="type-choice-list animate">
-              <a href="/catalog/all">
+              <a href="/catalog/all" data-filter="filtered">
                 <li class="type-choice-list-item">
                   <img class="type-choice-list-item-img" src="./src/assets/images/homeType1.svg" alt="универсальные">
                   <h2 class="type-choice-list-item-title title3">УНИВЕРСАЛЬНЫЕ</h2>
                 </li>
               </a>
-              <a href="/catalog/steer">
+              <a href="/catalog/steer" data-filter="filtered">
                 <li class="type-choice-list-item">
                   <img class="type-choice-list-item-img" src="./src/assets/images/homeType2.svg" alt="на рулевую ось">
                   <h2 class="type-choice-list-item-title title3">НА РУЛЕВУЮ ОСЬ</h2>
                 </li>
               </a>
-              <a href="/catalog/drive">
+              <a href="/catalog/drive" data-filter="filtered">
                 <li class="type-choice-list-item">
                   <img class="type-choice-list-item-img" src="./src/assets/images/homeType3.svg" alt="на ведущую ось">
                   <h2 class="type-choice-list-item-title title3">НА ВЕДУЩУЮ ОСЬ</h2>
                 </li>
               </a>
-              <a href="/catalog/trailer">
+              <a href="/catalog/trailer" data-filter="filtered">
                 <li class="type-choice-list-item">
                   <img class="type-choice-list-item-img" src="./src/assets/images/homeType4.svg" alt="на прицепную ось">
                   <h2 class="type-choice-list-item-title title3">НА ПРИЦЕПНУЮ ОСЬ</h2>
@@ -351,11 +351,82 @@
         </div>
       </section>
 
-      <!-- отфильтрованный каталог -->
-      <section class="catalogFilter" id="catalogFilter">
+      <!-- отфильтрованный каталог универсальные -->
+      <section class="catalogFilter" data-filter="all" id="catalog/all">
+        <div class="container">
+          <p class="path contacts-path title4"><a class="path-link" href="/">Главная — </a><a class="path-link"
+              href="/catalog">Каталог — </a>Универсальные</p>
+          <ul class="catalog-list"></ul>
+
+        </div>
+      </section>
+
+      <!-- отфильтрованный каталог на рулевую ось -->
+      <section class="catalogFilter" data-filter="steer" id="catalog/steer">
+        <div class="container">
+          <p class="path contacts-path title4"><a class="path-link" href="/">Главная — </a><a class="path-link"
+              href="/catalog">Каталог — </a>На рулевую ось</p>
+          <ul class="catalog-list"></ul>
+
+        </div>
+      </section>
+
+      <!-- отфильтрованный каталог на ведущую ось -->
+      <section class="catalogFilter" data-filter="drive" id="catalog/drive">
+        <div class="container">
+          <p class="path contacts-path title4"><a class="path-link" href="/">Главная — </a><a class="path-link"
+              href="/catalog">Каталог — </a>На ведущую ось</p>
+          <ul class="catalog-list"></ul>
+
+        </div>
+      </section>
+
+      <!-- отфильтрованный каталог на прицепную ось -->
+      <section class="catalogFilter" data-filter="position" id="catalog/trailer">
+        <div class="container">
+          <p class="path contacts-path title4"><a class="path-link" href="/">Главная — </a><a class="path-link"
+              href="/catalog">Каталог — </a>На прицепную ось</p>
+          <ul class="catalog-list"></ul>
+
+        </div>
+      </section>
+
+      <!-- отфильтрованный каталог дальнемагистральные-->
+      <section class="catalogFilter" data-filter="longhaul" id="catalog/longhaul">
+        <div class="container">
+          <p class="path contacts-path title4"><a class="path-link" href="/">Главная — </a><a class="path-link"
+              href="/catalog">Каталог — </a>Дальнемагистральные</p>
+          <ul class="catalog-list"></ul>
+
+        </div>
+      </section>
+
+      <!-- отфильтрованный каталог дорога/бездорожье -->
+      <section class="catalogFilter" data-filter="onoffroad" id="catalog/onoffroad">
+        <div class="container">
+          <p class="path contacts-path title4"><a class="path-link" href="/">Главная — </a><a class="path-link"
+              href="/catalog">Каталог — </a>Дорога / Бездорожье</p>
+          <ul class="catalog-list"></ul>
+
+        </div>
+      </section>
+
+      <!-- отфильтрованный каталог бездорожье-->
+      <section class="catalogFilter" data-filter="offroad" id="catalog/offroad">
+        <div class="container">
+          <p class="path contacts-path title4"><a class="path-link" href="/">Главная — </a><a class="path-link"
+              href="/catalog">Каталог — </a>Бездорожье</p>
+          <ul class="catalog-list"></ul>
+
+        </div>
+      </section>
+
+      <!-- страница отдельной модели -->
+      <section class="catalogItem" id="catalogItem">
         <div class="container">
           <!-- <p class="path contacts-path title4"><a class="path-link" href="/">Главная — </a><a class="path-link"
-              href="/">Каталог — </a>Универсальные</p> -->
+              href="/catalog">Каталог — </a>Бездорожье</p> -->
+
         </div>
       </section>
 

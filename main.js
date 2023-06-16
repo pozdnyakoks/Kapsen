@@ -1,5 +1,5 @@
 import './style.css'
-import catalog from './src/assets/js/catalog';
+import catalog, { catalogItem } from './src/assets/js/catalog';
 
 
 const applyFooter = document.querySelector('.apply-btn');
@@ -75,7 +75,26 @@ links.forEach(el => {
 
       const prevPath = window.location.pathname;
       history.pushState({ prevUrl: prevPath }, 'link', el.getAttribute('href'));
+      // if (el.dataset.model) {
+      //   console.log('hhh')
+      //   const selector = window.location.pathname.slice(1);
+      //   const prevSelector = prevPath.slice(1);
+      //   document.getElementById(prevSelector).classList.remove('visible');
+      //   document.getElementById(prevSelector).classList.remove('block')
+      //   document.getElementById(selector).classList.add('block');
+      //   document.getElementById(selector).classList.add('visible')
+      //   // document.getElementById('catalogItem').insertAdjacentHTML('beforeend', catalogItem())
+      //   catalogItem()
+
+
+      // }
+      // else {
+      // if (el.dataset.filter) {
+
+      // }
+      console.log(el.dataset.model)
       changePath(prevPath, window.location.pathname)
+      // }
     })
   }
 })
@@ -88,19 +107,19 @@ function changePath(prevPath, path) {
   console.log(path)
 
   if (path === '/' && prevPath === '/') {
-    console.log('equal main')
+    // console.log('equal main')
 
     home.classList.add('block', 'visible');
   }
 
   else if (path === prevPath) {
-    console.log('equal paths')
+    // console.log('equal paths')
 
     document.getElementById(selector).classList.add('block', 'visible');
   }
 
   else if (path !== prevPath && prevPath === '/') {
-    console.log('form main')
+    // console.log('form main')
 
     home.classList.remove('visible');
 
@@ -112,7 +131,7 @@ function changePath(prevPath, path) {
   }
 
   else if (path !== prevPath && path === '/') {
-    console.log('to main')
+    // console.log('to main')
 
     document.getElementById(prevSelector).classList.remove('visible');
     setTimeout(() => {
@@ -123,7 +142,7 @@ function changePath(prevPath, path) {
   }
 
   else {
-    console.log('else')
+    // console.log('else')
 
     // console.log(prevSelector)
     // console.log(selector)
@@ -151,7 +170,15 @@ function changePath(prevPath, path) {
 }
 
 const catalogList = document.getElementById('catalog-list');
-catalogList.insertAdjacentHTML('beforeend', catalog())
+catalogList.insertAdjacentHTML('beforeend', catalog());
+
+const filteredCatalogs = document.querySelectorAll('.catalogFilter');
+
+filteredCatalogs.forEach(filteredCatalog => {
+  const filteredList = filteredCatalog.querySelector('.catalog-list')
+  // console.log(filteredList)
+  filteredList.insertAdjacentHTML('beforeend', catalog(filteredCatalog.dataset.filter))
+})
 
 // window.addEventListener('popstate', () => {
 //   // console.log(document.referrer)
