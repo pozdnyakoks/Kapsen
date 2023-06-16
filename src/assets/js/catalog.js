@@ -48,7 +48,7 @@ export function catalogItem() {
     </p>
 
    <div class="catalog-item-main">
-      <img class="catalog-item-main-img" src=${item.img} alt=${item.name}>
+      <img class="catalog-item-main-img" src=./../${item.img} alt=${item.name}>
       <div class="catalog-item-main-info">
         <h2 class="title1 catalog-item-main-title">${item.name}</h2>
         <p class="catalog-item-main-desc title4">${item.description}</p>
