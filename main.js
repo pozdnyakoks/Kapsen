@@ -67,32 +67,34 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
+const catalogList = document.getElementById('catalog-list');
+catalogList.insertAdjacentHTML('beforeend', catalog());
+
+const filteredCatalogs = document.querySelectorAll('.catalogFilter');
+
+filteredCatalogs.forEach(filteredCatalog => {
+  const filteredList = filteredCatalog.querySelector('.catalog-list')
+  // console.log(filteredList)
+  filteredList.insertAdjacentHTML('beforeend', catalog(filteredCatalog.dataset.filter))
+})
+
+
+
 const links = document.querySelectorAll('a');
 links.forEach(el => {
   if (el.getAttribute('href')[0] === '/') {
     el.addEventListener('click', (ev) => {
       ev.preventDefault()
-
       const prevPath = window.location.pathname;
       history.pushState({ prevUrl: prevPath }, 'link', el.getAttribute('href'));
-      // if (el.dataset.model) {
-      //   console.log('hhh')
-      //   const selector = window.location.pathname.slice(1);
-      //   const prevSelector = prevPath.slice(1);
-      //   document.getElementById(prevSelector).classList.remove('visible');
-      //   document.getElementById(prevSelector).classList.remove('block')
-      //   document.getElementById(selector).classList.add('block');
-      //   document.getElementById(selector).classList.add('visible')
-      //   // document.getElementById('catalogItem').insertAdjacentHTML('beforeend', catalogItem())
-      //   catalogItem()
 
-
-      // }
-      // else {
-      // if (el.dataset.filter) {
-
-      // }
-      console.log(el.dataset.model)
+      if (el.dataset.model) {
+        const catalogItemEl = document.getElementById('catalogItem')
+        catalogItemEl.querySelector('.container').insertAdjacentHTML('beforeend', catalogItem())
+        // console.log(el.dataset.model)
+        // catalogItem()
+      }
+      // else
       changePath(prevPath, window.location.pathname)
       // }
     })
@@ -100,29 +102,41 @@ links.forEach(el => {
 })
 
 function changePath(prevPath, path) {
+  const possiblePaths = ['all', 'steer', 'drive', 'trailer', 'longhaul', 'onoffroad', 'offroad'];
+  let selector = path.slice(1);
+  let prevSelector = prevPath.slice(1);
+  if (path.split('/').length > 2) {
+    console.log('path3')
+    const lastPath = possiblePaths.find(el => el === path.split('/')[path.split('/').length - 1])
+    selector = lastPath === undefined ? 'catalogItem' : selector;
+  }
+  if (prevPath.split('/').length > 2) {
+    console.log('prevpath3')
+    const lastPath = possiblePaths.find(el => el === prevPath.split('/')[prevPath.split('/').length - 1])
+    prevSelector = lastPath === undefined ? 'catalogItem' : prevSelector;
+  }
+  // console.log(path.split('/').length)
+  // console.log(possiblePaths.find(el => el ===
+  //   path.split('/')[path.split('/').length - 1]));
+
   const home = document.getElementById('home');
-  const selector = path.slice(1);
-  const prevSelector = prevPath.slice(1);
+
   console.log(prevPath)
   console.log(path)
 
-  if (path === '/' && prevPath === '/') {
-    // console.log('equal main')
+  console.log(selector)
+  console.log(prevSelector)
 
+  if (path === '/' && prevPath === '/') {
     home.classList.add('block', 'visible');
   }
 
   else if (path === prevPath) {
-    // console.log('equal paths')
-
     document.getElementById(selector).classList.add('block', 'visible');
   }
 
   else if (path !== prevPath && prevPath === '/') {
-    // console.log('form main')
-
     home.classList.remove('visible');
-
     setTimeout(() => {
       home.classList.remove('block')
       document.getElementById(selector).classList.add('block');
@@ -131,8 +145,6 @@ function changePath(prevPath, path) {
   }
 
   else if (path !== prevPath && path === '/') {
-    // console.log('to main')
-
     document.getElementById(prevSelector).classList.remove('visible');
     setTimeout(() => {
       home.classList.add('block')
@@ -142,18 +154,11 @@ function changePath(prevPath, path) {
   }
 
   else {
-    // console.log('else')
-
-    // console.log(prevSelector)
-    // console.log(selector)
     document.getElementById(prevSelector).classList.remove('visible');
     setTimeout(() => {
-      // document.getElementById(prevSelector).addEventListener('transitionend', () => {
-      document.getElementById(prevSelector).classList.remove('block')
+      document.getElementById(prevSelector).classList.remove('block');
       document.getElementById(selector).classList.add('block');
       document.getElementById(selector).classList.add('visible')
-
-      // })
     }, 600)
 
   }
@@ -168,17 +173,6 @@ function changePath(prevPath, path) {
     }
   })
 }
-
-const catalogList = document.getElementById('catalog-list');
-catalogList.insertAdjacentHTML('beforeend', catalog());
-
-const filteredCatalogs = document.querySelectorAll('.catalogFilter');
-
-filteredCatalogs.forEach(filteredCatalog => {
-  const filteredList = filteredCatalog.querySelector('.catalog-list')
-  // console.log(filteredList)
-  filteredList.insertAdjacentHTML('beforeend', catalog(filteredCatalog.dataset.filter))
-})
 
 // window.addEventListener('popstate', () => {
 //   // console.log(document.referrer)
