@@ -32,6 +32,9 @@
 
 .catalog-item-main-img {
   width: 11%;
+  /* box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.2); */
+  /* background-color: rgba(45, 44, 44, 0.4); */
+  /* filter: blur(50.5px); */
 }
 
 .catalog-item-main-info {
@@ -48,7 +51,13 @@
 }
 
 .catalog-item-main-desc {
+  list-style-type: circle;
   color: var(--black);
+  /* line-height: 40px; */
+}
+
+.catalog-item-main-desc li {
+  margin-bottom: 10px;
 }
 
 .catalog-item-table {

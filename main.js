@@ -74,68 +74,80 @@ const filteredCatalogs = document.querySelectorAll('.catalogFilter');
 
 filteredCatalogs.forEach(filteredCatalog => {
   const filteredList = filteredCatalog.querySelector('.catalog-list')
-  // console.log(filteredList)
   filteredList.insertAdjacentHTML('beforeend', catalog(filteredCatalog.dataset.filter))
 })
 
 
+linksPath();
 
-const links = document.querySelectorAll('a');
-links.forEach(el => {
-  if (el.getAttribute('href')[0] === '/') {
-    el.addEventListener('click', (ev) => {
-      ev.preventDefault()
-      const prevPath = window.location.pathname;
-      history.pushState({ prevUrl: prevPath }, 'link', el.getAttribute('href'));
+const catalogItemEl = document.getElementById('catalogItem')
+let curr = '';
 
-      if (el.dataset.model) {
-        const catalogItemEl = document.getElementById('catalogItem')
-        catalogItemEl.querySelector('.container').insertAdjacentHTML('beforeend', catalogItem())
-        // console.log(el.dataset.model)
-        // catalogItem()
-      }
-      // else
-      changePath(prevPath, window.location.pathname)
-      // }
-    })
-  }
-})
+function linksPath() {
+  const links = document.querySelectorAll('a');
+  console.log(links)
+  links.forEach(el => {
+    if (el.getAttribute('href')[0] === '/') {
+      el.addEventListener('click', (ev) => {
+        if (el.dataset.model) {
+          catalogItemEl.querySelector('.container').insertAdjacentHTML('beforeend', catalogItem())
+          linksPath();
+        }
+        ev.preventDefault()
+        const prevPath = window.location.pathname;
+        console.log(el.getAttribute('href'))
+        history.pushState({
+          prevUrl: prevPath, currUrl: el.getAttribute('href')
+        }, 'link', el.getAttribute('href'));
+        curr = el.getAttribute('href');
+        console.log(window.history.state)
+        changePath(prevPath, window.location.pathname)
+      })
+    }
+  })
+}
+
 
 function changePath(prevPath, path) {
+  const sections = document.querySelectorAll('section');
   const possiblePaths = ['all', 'steer', 'drive', 'trailer', 'longhaul', 'onoffroad', 'offroad'];
   let selector = path.slice(1);
   let prevSelector = prevPath.slice(1);
   if (path.split('/').length > 2) {
-    console.log('path3')
+    // console.log('path3')
     const lastPath = possiblePaths.find(el => el === path.split('/')[path.split('/').length - 1])
     selector = lastPath === undefined ? 'catalogItem' : selector;
   }
   if (prevPath.split('/').length > 2) {
-    console.log('prevpath3')
+    // console.log('prevpath3')
     const lastPath = possiblePaths.find(el => el === prevPath.split('/')[prevPath.split('/').length - 1])
     prevSelector = lastPath === undefined ? 'catalogItem' : prevSelector;
   }
-  // console.log(path.split('/').length)
-  // console.log(possiblePaths.find(el => el ===
-  //   path.split('/')[path.split('/').length - 1]));
 
   const home = document.getElementById('home');
 
-  console.log(prevPath)
-  console.log(path)
+  // console.log(prevPath)
+  // console.log(path)
 
   console.log(selector)
   console.log(prevSelector)
 
   if (path === '/' && prevPath === '/') {
+    console.log('equal home')
     home.classList.add('block', 'visible');
   }
 
   else if (path === prevPath) {
+    if (path.split('/').length > 2) {
+      if (!possiblePaths.find(el => el === path.split('/')[path.split('/').length - 1])) catalogItemEl.querySelector('.container').insertAdjacentHTML('beforeend', catalogItem())
+      linksPath()
+    }
     document.getElementById(selector).classList.add('block', 'visible');
   }
 
   else if (path !== prevPath && prevPath === '/') {
+    console.log('from home')
+
     home.classList.remove('visible');
     setTimeout(() => {
       home.classList.remove('block')
@@ -145,6 +157,8 @@ function changePath(prevPath, path) {
   }
 
   else if (path !== prevPath && path === '/') {
+    console.log('to home')
+
     document.getElementById(prevSelector).classList.remove('visible');
     setTimeout(() => {
       home.classList.add('block')
@@ -154,6 +168,8 @@ function changePath(prevPath, path) {
   }
 
   else {
+    console.log('else')
+
     document.getElementById(prevSelector).classList.remove('visible');
     setTimeout(() => {
       document.getElementById(prevSelector).classList.remove('block');
@@ -175,22 +191,28 @@ function changePath(prevPath, path) {
 }
 
 // window.addEventListener('popstate', () => {
-//   // console.log(document.referrer)
-//   // const url = new URL(document.referrer)
-//   // console.log(url.pathname)
-//   console.log(window.history.state)
-//   if (window.history.state == null) {
-//     changePath('/', window.location.pathname)
-//   } else {
-//     console.log(window.history.state.prevUrl)
-//     console.log(window.location.pathname)
-//     changePath(window.history.state.prevUrl, window.location.pathname)
+  // console.log(document.referrer)
+  // const url = new URL(document.referrer)
+  // console.log(url.pathname)
+  // console.log(window.location.pathname)
+  // console.log(window.history.state)
+  // console.log(curr)
 
-//   }
-//   // console.log(window.history.state.prevUrl)
-//   // console.log(window.location.pathname)
-//   // const prevPath = window.location.pathname;
-//   // history.pushState({}, 'link', el.getAttribute('href'));
+  // if (window.history.state == null) {
+  //   history.pushState({ prevUrl: '/' }, 'link', el.getAttribute('href'));
+  //   changePath('/', window.location.pathname)
+  // } else {
+  //   history.pushState({ prevUrl: window.history.state.prevUrl, currUrl: window.location.pathname }, 'link', window.location.pathname);
+
+  //   // console.log(window.history.state.prevUrl)
+  //   // console.log(window.location.pathname)
+  //   changePath(curr ? curr : window.history.state.prevUrl, window.location.pathname)
+  //   curr = ''
+  // }
+  // console.log(window.history.state.prevUrl)
+  // console.log(window.location.pathname)
+  // const prevPath = window.location.pathname;
+  // history.pushState({}, 'link', el.getAttribute('href'));
 // })
 
 

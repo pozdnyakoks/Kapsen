@@ -4,7 +4,7 @@ export function catalogItem() {
   const path = window.location.pathname;
   const arr = path.split('/');
   const item = tyres.tyres.find(el => el.name === arr[arr.length - 1])
-  console.log(window.location.pathname)
+  // console.log(window.location.pathname)
   const linksRow = window.location.pathname.split('/');
 
   function getRow() {
@@ -22,10 +22,9 @@ export function catalogItem() {
       return `<a class="path-link" href="/catalog">Каталог — </a>${item.name}`
     }
   }
-  console.log(linksRow)
+  // console.log(linksRow)
 
   const row = item.sizes.map(size => {
-
     return `
         <div class="catalog-item-table-row title4 ">
           <p>${size.size}</p>
@@ -51,7 +50,7 @@ export function catalogItem() {
       <img class="catalog-item-main-img" src=./../${item.img} alt=${item.name}>
       <div class="catalog-item-main-info">
         <h2 class="title1 catalog-item-main-title">${item.name}</h2>
-        <p class="catalog-item-main-desc title4">${item.description}</p>
+        <ul class="catalog-item-main-desc title4">${item.description}</ul>
       </div>
     </div>
 
@@ -98,13 +97,12 @@ export function catalogItem() {
 // },
 
 export default function catalog(filtered) {
-  // console.log(filtered)
   let tyresAr = tyres.tyres;
 
   if (filtered !== undefined) tyresAr = tyres.tyres.filter(tyre => tyre.road === filtered || tyre.position === filtered)
   return tyresAr.map(tyre =>
     ` <li class="catalog-list-item">
-        <img src=${tyre.img} alt=${tyre.name}>
+        <img src=./../${tyre.img} alt=${tyre.name}>
         <div class="catalog-list-item-block">
           <a href="/catalog${(filtered ? '/' + filtered : '') + '/' + tyre.name}" data-model=${tyre.name} class="catalog-list-item-btn title3">
             ПОДРОБНЕЕ
