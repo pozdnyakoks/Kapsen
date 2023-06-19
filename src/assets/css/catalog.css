@@ -61,6 +61,22 @@
   color: var(--red);
 }
 
+.catalog-list-item-btn:hover {
+  background-color: var(--red);
+  color: var(--grey);
+}
+
+.catalog-list-item-btn:active {
+  background-color: var(--dark-red);
+  color: var(--grey);
+  border-color: var(--dark-red);
+}
+
+.catalog-list-item-btn:focus-visible {
+  background-color: var(--red);
+  color: var(--grey);
+}
+
 .catalog-list-item-title {
   font-weight: 500;
   font-size: 48px;

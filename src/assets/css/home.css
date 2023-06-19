@@ -310,3 +310,19 @@
   margin-left: 33px;
   font-weight: 700;
 }
+
+.feedback-form-btn:hover {
+  background-color: var(--red);
+  color: var(--grey);
+}
+
+.feedback-form-btn:active {
+  background-color: var(--dark-red);
+  color: var(--grey);
+  border-color: var(--dark-red);
+}
+
+.feedback-form-btn:focus-visible {
+  background-color: var(--red);
+  color: var(--grey);
+}

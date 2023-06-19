@@ -15,7 +15,7 @@
         src="./src/assets/images/Kapsen_Loader_Transparent.mp4"></video>
     </div>
     <!-- оставить заявку -->
-    <div class="modal">
+    <div class="modal" id="apply">
       <div class="modal-content">
         <button class="modal-close-btn" aria-label="закрыть окно">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,8 +38,50 @@
 
       </div>
     </div>
-    <!-- спасибо -->
-    <div class="modal thanks">
+    <!-- спасибо за заявку -->
+    <div class="modal thanks" id="thanksForApply">
+      <div class="modal-content">
+        <button class="modal-close-btn" aria-label="закрыть окно">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.625 19.375L19.375 10.625" stroke="#343838" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M19.375 19.375L10.625 10.625" stroke="#343838" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+        </button>
+        <img class="thanks-img" src="./src/assets/images/icons/ok.svg" alt="выполнено">
+        <h2 class="modal-form-title title2">СПАСИБО!</h2>
+        <p class="modal-form-desc title4">Мы свяжемся с вами в самое ближайшее время!</p>
+
+
+      </div>
+    </div>
+
+    <!-- сообщить о поступлении -->
+    <div class="modal" id="availableModel">
+      <div class="modal-content">
+        <button class="modal-close-btn" aria-label="закрыть окно">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.625 19.375L19.375 10.625" stroke="#343838" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M19.375 19.375L10.625 10.625" stroke="#343838" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+        </button>
+        <form action="/" id="availableForm" class="modal-form">
+          <h2 class="modal-form-title title2">СООБЩИТЬ О ПОСТУПЛЕНИИ</h2>
+          <p class="modal-form-desc title4">Пожалуйста, оставьте свои контакты для связи</p>
+
+          <input type="text" class="modal-form-input" placeholder="Ваше имя">
+          <input type="email" class="modal-form-input" placeholder="Ваш email">
+          <input type="tel" class="modal-form-input" placeholder="Ваш телефон">
+          <textarea name="modal-comment" id="availableTextarea" cols="30" rows="8" placeholder="Комментарии"
+            class="modal-comment"></textarea>
+          <button class="modal-form-btn title4">ОТПРАВИТЬ</button>
+        </form>
+
+      </div>
+    </div>
+    <!-- спасибо за сообщить о поступлении -->
+    <div class="modal thanks" id="thanksForAvailable">
       <div class="modal-content">
         <button class="modal-close-btn" aria-label="закрыть окно">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +115,9 @@
             <li class="header-nav-list-item title3  "><a class="header-nav-list-item-link "
                 href="/contacts">Контакты</a>
             </li>
-            <li class="header-nav-list-item title3"><a class="header-nav-list-item-link" href="/cart">Корзина</a></li>
+            <li class="header-nav-list-item title3"><a class="header-nav-list-item-link" href="/cart">Корзина</a>
+              <div class="cart-count title4">0</div>
+            </li>
           </ul>
         </nav>
         <div class="header-links">
@@ -264,82 +308,6 @@
       <section class="catalog" id="catalog">
         <div class="container">
           <p class="path contacts-path title4"><a class="path-link" href="/">Главная — </a>Каталог</p>
-          <!-- 
-          <div class="catalog-item-main">
-            <img class="catalog-item-main-img" src="./src/assets/images/Tyres/longhaul/all/s02.svg" alt="">
-            <div class="catalog-item-main-info">
-              <h2 class="title1 catalog-item-main-title">S 02</h2>
-              <p class="catalog-item-main-desc title4">Как и большинство других моделей, грузовая шина Kapsen S02
-                отличается
-                достаточно узкой сферой применения, будучи
-                предназначенной для эксплуатации на рулевой оси магистральных тягачей.
-                Именно поэтому данная модель характеризуется коротким тормозным путем на мокрой дороге, отличной
-                курсовой устойчивостью,
-                низким сопротивлением качению и продолжительным сроком службы.</p>
-            </div>
-
-          </div>
-
-          <div class="catalog-item-table">
-            <div class="catalog-item-table-row title4 catalog-item-table-row-thead">
-              <p>Размер</p>
-              <p>Норма слойности</p>
-              <p>Стандартный колесный&nbsp;диск</p>
-              <p>Индекс нагрузки</p>
-              <p>Наружный диаметр&nbsp;(mm)</p>
-              <p>Ширина шины&nbsp;(mm)</p>
-              <p>Максимальная нагрузка&nbsp;(kg)
-                одинарная&nbsp;/&nbsp;двойная</p>
-              <p>Максимальное
-                давление&nbsp;(KPA)</p>
-              <p>Цена</p>
-            </div>
-
-            <div class="catalog-item-table-row title4 ">
-              <p>7.50R16LT</p>
-              <p>14</p>
-              <p>6.00G</p>
-              <p>122/118L</p>
-              <p>805</p>
-              <p>215</p>
-              <p>1500/1320</p>
-              <p>770</p>
-              <p>15 000₽</p>
-            </div>
-            <div class="catalog-item-table-row title4 ">
-              <p>7.50R16LT</p>
-              <p>14</p>
-              <p>6.00G</p>
-              <p>122/118L</p>
-              <p>805</p>
-              <p>215</p>
-              <p>1500/1320</p>
-              <p>770</p>
-              <p>15 000₽</p>
-            </div>
-            <div class="catalog-item-table-row title4 ">
-              <p>7.50R16LT</p>
-              <p>14</p>
-              <p>6.00G</p>
-              <p>122/118L</p>
-              <p>805</p>
-              <p>215</p>
-              <p>1500/1320</p>
-              <p>770</p>
-              <p>15 000₽</p>
-            </div>
-            <div class="catalog-item-table-row title4 ">
-              <p>7.50R16LT</p>
-              <p>14</p>
-              <p>6.00G</p>
-              <p>122/118L</p>
-              <p>805</p>
-              <p>215</p>
-              <p>1500/1320</p>
-              <p>770</p>
-              <p>15 000₽</p>
-            </div>
-          </div> -->
 
           <ul class="catalog-list" id="catalog-list"></ul>
         </div>

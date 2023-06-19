@@ -3,33 +3,38 @@ import catalog, { catalogItem } from './src/assets/js/catalog';
 
 
 const applyFooter = document.querySelector('.apply-btn');
-const modal = document.querySelector('.modal')
+const modal = document.getElementById('apply')
 const applyForm = document.getElementById('applyForm')
-const thanks = document.querySelector('.thanks')
+const availableForm = document.getElementById('availableForm')
+const thanks = document.getElementById('thanksForApply')
+const availableModel = document.getElementById('availableModel')
+const thanksForAvailable = document.getElementById('thanksForAvailable')
 
-
+// открыть модальное окно
 applyFooter.addEventListener('click', () => {
   modal.classList.add('visible');
   document.body.style.overflow = 'hidden';
 })
 
-
+// закрыть модальное окно
 function closeModal() {
   thanks.classList.remove('visible');
   modal.classList.remove('visible');
+  thanksForAvailable.classList.remove('visible');
+  availableModel.classList.remove('visible');
   document.body.style.overflow = '';
 }
-
+// закрыть модальное окно
 document.addEventListener('click', (ev) => {
   if (ev.target.classList.contains('modal')) {
     closeModal()
   }
-
   if (ev.target.classList.contains('modal-close-btn') || ev.target.parentElement.classList.contains('modal-close-btn')) {
     closeModal()
   }
 })
 
+// анимация блоков на главной
 function reveal() {
   const animate = document.querySelectorAll('.animate')
   for (let i = 0; i < animate.length; i++) {
@@ -41,18 +46,26 @@ function reveal() {
     }
   }
 }
-
 window.addEventListener('scroll', reveal)
 
+
+// открыть модальное окно со спасибо после сабмита
 applyForm.addEventListener('submit', (ev) => {
   ev.preventDefault();
   thanks.classList.add('visible');
+  document.body.style.overflow = 'hidden';
+})
+availableForm.addEventListener('submit', (ev) => {
+  ev.preventDefault();
+  thanksForAvailable.classList.add('visible');
   document.body.style.overflow = 'hidden';
 })
 
 const heroTitle = document.querySelector('.hero-title')
 const heroImg = document.querySelector('.hero-img')
 const loader = document.querySelector('.loader')
+
+// лоадер
 document.addEventListener('DOMContentLoaded', () => {
   // setTimeout(() => {
   loader.classList.add('hidden');
@@ -72,44 +85,55 @@ catalogList.insertAdjacentHTML('beforeend', catalog());
 
 const filteredCatalogs = document.querySelectorAll('.catalogFilter');
 
+// фильтрация каталога
 filteredCatalogs.forEach(filteredCatalog => {
   const filteredList = filteredCatalog.querySelector('.catalog-list')
   filteredList.insertAdjacentHTML('beforeend', catalog(filteredCatalog.dataset.filter))
 })
 
 
-linksPath();
+
 
 const catalogItemEl = document.getElementById('catalogItem')
 let curr = '';
 
+// отменить дефолтный переход по ссылкам внутри сайта
 function linksPath() {
   const links = document.querySelectorAll('a');
-  console.log(links)
+  // console.log(links)
   links.forEach(el => {
     if (el.getAttribute('href')[0] === '/') {
       el.addEventListener('click', (ev) => {
-        if (el.dataset.model) {
-          catalogItemEl.querySelector('.container').insertAdjacentHTML('beforeend', catalogItem())
-          linksPath();
-        }
         ev.preventDefault()
+        // console.log(el.dataset.model)
+        if (el.dataset.model) {
+          // console.log('jjj')
+          catalogItemEl.querySelector('.container').innerHTML = '';
+          catalogItemEl.querySelector('.container').insertAdjacentHTML('beforeend', catalogItem(el.dataset.model))
+          changeActiveSize()
+          linksPath();
+          askForAvailable();
+        }
+
         const prevPath = window.location.pathname;
-        console.log(el.getAttribute('href'))
+        // console.log(el.getAttribute('href'))
         history.pushState({
           prevUrl: prevPath, currUrl: el.getAttribute('href')
         }, 'link', el.getAttribute('href'));
         curr = el.getAttribute('href');
-        console.log(window.history.state)
+        // console.log(window.history.state)
         changePath(prevPath, window.location.pathname)
       })
     }
   })
 }
+linksPath();
 
 
+// переход по ссылкам с анимацией
 function changePath(prevPath, path) {
-  const sections = document.querySelectorAll('section');
+  window.scrollTo(0, 0);
+
   const possiblePaths = ['all', 'steer', 'drive', 'trailer', 'longhaul', 'onoffroad', 'offroad'];
   let selector = path.slice(1);
   let prevSelector = prevPath.slice(1);
@@ -129,25 +153,30 @@ function changePath(prevPath, path) {
   // console.log(prevPath)
   // console.log(path)
 
-  console.log(selector)
-  console.log(prevSelector)
+  // console.log(selector)
+  // console.log(prevSelector)
 
   if (path === '/' && prevPath === '/') {
-    console.log('equal home')
+    // console.log('equal home')
     home.classList.add('block', 'visible');
   }
 
   else if (path === prevPath) {
     if (path.split('/').length > 2) {
-      if (!possiblePaths.find(el => el === path.split('/')[path.split('/').length - 1])) catalogItemEl.querySelector('.container').insertAdjacentHTML('beforeend', catalogItem())
-      linksPath()
+      if (!possiblePaths.find(el => el === path.split('/')[path.split('/').length - 1])) {
+        catalogItemEl.querySelector('.container').innerHTML = '';
+        catalogItemEl.querySelector('.container').insertAdjacentHTML('beforeend', catalogItem())
+        changeActiveSize()
+        linksPath()
+        askForAvailable()
+      }
     }
     document.getElementById(selector).classList.add('block', 'visible');
   }
 
   else if (path !== prevPath && prevPath === '/') {
-    console.log('from home')
-
+    // console.log('from home')
+    // 
     home.classList.remove('visible');
     setTimeout(() => {
       home.classList.remove('block')
@@ -157,7 +186,7 @@ function changePath(prevPath, path) {
   }
 
   else if (path !== prevPath && path === '/') {
-    console.log('to home')
+    // console.log('to home')
 
     document.getElementById(prevSelector).classList.remove('visible');
     setTimeout(() => {
@@ -168,8 +197,7 @@ function changePath(prevPath, path) {
   }
 
   else {
-    console.log('else')
-
+    // console.log('else')
     document.getElementById(prevSelector).classList.remove('visible');
     setTimeout(() => {
       document.getElementById(prevSelector).classList.remove('block');
@@ -180,6 +208,7 @@ function changePath(prevPath, path) {
   }
 
   // header links
+  // активная ссылка в хэдере
   const headerLinks = document.querySelectorAll('.header-nav-list-item-link');
   headerLinks.forEach(link => {
     if (link.getAttribute('href') === path) {
@@ -190,30 +219,123 @@ function changePath(prevPath, path) {
   })
 }
 
-// window.addEventListener('popstate', () => {
-  // console.log(document.referrer)
-  // const url = new URL(document.referrer)
-  // console.log(url.pathname)
+const cartCount = document.querySelector('.cart-count');
+
+window.addEventListener('popstate', () => {
   // console.log(window.location.pathname)
   // console.log(window.history.state)
-  // console.log(curr)
+  const sections = document.querySelectorAll('section');
 
-  // if (window.history.state == null) {
-  //   history.pushState({ prevUrl: '/' }, 'link', el.getAttribute('href'));
-  //   changePath('/', window.location.pathname)
-  // } else {
-  //   history.pushState({ prevUrl: window.history.state.prevUrl, currUrl: window.location.pathname }, 'link', window.location.pathname);
+  window.scrollTo(0, 0);
+  const path = window.location.pathname;
+  // console.log(path)
+  const possiblePaths = ['all', 'steer', 'drive', 'trailer', 'longhaul', 'onoffroad', 'offroad'];
+  let selector = path.slice(1);
+  // console.log(selector)
+  if (path.split('/').length > 2) {
+    const lastPath = possiblePaths.find(el => el === path.split('/')[path.split('/').length - 1])
+    selector = lastPath === undefined ? 'catalogItem' : selector;
+  }
 
-  //   // console.log(window.history.state.prevUrl)
-  //   // console.log(window.location.pathname)
-  //   changePath(curr ? curr : window.history.state.prevUrl, window.location.pathname)
-  //   curr = ''
-  // }
-  // console.log(window.history.state.prevUrl)
-  // console.log(window.location.pathname)
-  // const prevPath = window.location.pathname;
-  // history.pushState({}, 'link', el.getAttribute('href'));
+  const home = document.getElementById('home');
+
+  sections.forEach(section => {
+    section.classList.remove('block', 'visible')
+  })
+
+  if (path === '/') home.classList.add('block', 'visible');
+  else document.getElementById(selector).classList.add('block', 'visible')
+
+
+  const headerLinks = document.querySelectorAll('.header-nav-list-item-link');
+  headerLinks.forEach(link => {
+    if (link.getAttribute('href') === path) {
+      link.classList.add('active')
+    } else {
+      link.classList.remove('active')
+    }
+  })
+})
+
+
+
+function changeActiveSize() {
+  document.querySelectorAll('.open-btn-add').forEach(button => {
+    button.addEventListener('click', () => {
+
+      button.classList.remove('open-btn-add')
+      button.classList.add('open-btn-incart')
+      button.innerHTML = `<a href="/cart">в корзине</a>`
+
+      if (!localStorage.getItem('kapsenCart'))
+        localStorage.setItem('kapsenCart', JSON.stringify({ [button.dataset.name]: [button.dataset.size] }));
+      else {
+        const lsObj = localStorage.getItem('kapsenCart');
+        const lsName = JSON.parse(lsObj)
+        console.log(lsName)
+        if (lsName[button.dataset.name] === undefined) {
+
+          lsName[button.dataset.name] = [button.dataset.size]
+          localStorage.setItem('kapsenCart', JSON.stringify(lsName))
+        }
+        else {
+          JSON.parse(localStorage.getItem('kapsenCart'))
+          lsName[button.dataset.name] = [...lsName[button.dataset.name], button.dataset.size]
+          localStorage.setItem('kapsenCart', JSON.stringify(lsName))
+
+        }
+
+
+      }
+      cartCount.textContent = String(Number(++cartCount.textContent))
+    })
+  })
+
+
+  if (localStorage.getItem('kapsenCart') !== null) {
+    const lsObj = localStorage.getItem('kapsenCart');
+    const lsName = JSON.parse(lsObj)
+    let count = 0;
+    for (let models in lsName) {
+      count += models.length
+    }
+    if (count > 0) {
+      cartCount.classList.add('visible');
+      cartCount.textContent = String(count)
+    }
+  }
+
+  const sizes = document.querySelectorAll('.catalog-size-row')
+  sizes.forEach(size => {
+    size.addEventListener('click', () => {
+      sizes.forEach(el => {
+        el.querySelector('.open-btn').classList.remove('visible')
+        el.classList.remove('open-size')
+      })
+      size.querySelector('.open-btn').classList.add('visible')
+      size.classList.add('open-size');
+    })
+  })
+}
+
+// window.addEventListener('storage', () => {
+//   console.log('hhh')
+//   if (localStorage.getItem('kapsenCart') !== null) {
+//     console.log(JSON.parse(localStorage.getItem('kapsenCart')))
+//   }
 // })
 
+// window.addEventListener('storage', () => {
+//   alert('session storage variable value changed');
+// });
 
+function askForAvailable() {
+  document.querySelectorAll('.open-btn-out').forEach(button => {
+    button.addEventListener('click', () => {
+      availableModel.classList.add('visible')
+      document.body.style.overflow = 'hidden';
+      availableModel.querySelector('#availableTextarea').value = `Пожалуйста, сообщите мне, когда модель ${button.dataset.name} размера ${button.dataset.size} появится в наличии`
+    })
+  })
+}
 

@@ -62,3 +62,18 @@
 .header-links-item {
   color: var(--red);
 }
+
+.cart-count {
+  opacity: 0;
+  padding: 1px 6px;
+  content: '';
+  position: absolute;
+  top: -23px;
+  right: -19px;
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.cart-count.visible {
+  opacity: 1;
+}

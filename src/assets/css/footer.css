@@ -42,6 +42,22 @@
   text-transform: uppercase;
   padding: 17px 57px 15px;
   font-weight: 700;
+
+}
+
+.footer-btn:hover {
+  color: var(--red);
+  background-color: var(--white);
+}
+
+.footer-btn:active {
+  color: var(--red);
+  background-color: var(--grey-light2);
+}
+
+.footer-btn:focus-visible {
+  color: var(--red);
+  background-color: var(--white);
 }
 
 .footer-links {
@@ -95,6 +111,8 @@
   content-visibility: visible;
 }
 
+
+
 .modal-content {
   text-align: center;
   position: relative;
@@ -105,6 +123,10 @@
   overflow: hidden;
   width: 500px;
   padding: 51px 62px 32px 67px;
+}
+
+#availableModel .modal-content {
+  padding: 51px 59px 32px 64px;
 }
 
 .modal-content::before {
