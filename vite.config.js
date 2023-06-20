@@ -1,3 +1,5 @@
+import { viteStaticCopy } from 'vite-plugin-static-copy'
+
 export default {
   plugins: [
     viteStaticCopy({
@@ -9,5 +11,4 @@ export default {
       ]
     })
   ],
-  appType: 'mpa'
 }

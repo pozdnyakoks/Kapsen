@@ -70,18 +70,18 @@ const loader = document.querySelector('.loader')
 
 // лоадер
 document.addEventListener('DOMContentLoaded', () => {
-  // setTimeout(() => {
-  loader.classList.add('hidden');
-  changePath(window.location.pathname, window.location.pathname)
-
   setTimeout(() => {
-    heroTitle.classList.add('scroll')
-    heroImg.classList.add('scroll')
-    loader.classList.add('none');
-  }, 1000)
+    loader.classList.add('hidden');
+    changePath(window.location.pathname, window.location.pathname)
+
+    setTimeout(() => {
+      heroTitle.classList.add('scroll')
+      heroImg.classList.add('scroll')
+      loader.classList.add('none');
+    }, 1000)
+  }
+    , 8000)
 }
-  // , 5000)
-  // }
 )
 
 
