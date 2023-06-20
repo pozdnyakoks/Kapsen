@@ -1,5 +1,6 @@
 import './style.css'
 import catalog, { catalogItem } from './src/assets/js/catalog';
+import cart from './src/assets/js/cart';
 
 
 const applyFooter = document.querySelector('.apply-btn');
@@ -9,6 +10,8 @@ const availableForm = document.getElementById('availableForm')
 const thanks = document.getElementById('thanksForApply')
 const availableModel = document.getElementById('availableModel')
 const thanksForAvailable = document.getElementById('thanksForAvailable')
+
+const cartBlock = document.querySelector('#cart .container')
 
 // открыть модальное окно
 applyFooter.addEventListener('click', () => {
@@ -76,8 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
     heroImg.classList.add('scroll')
     loader.classList.add('none');
   }, 1000)
-  // }, 5000)
-})
+}
+  // , 5000)
+  // }
+)
 
 
 const catalogList = document.getElementById('catalog-list');
@@ -257,7 +262,7 @@ window.addEventListener('popstate', () => {
   })
 })
 
-
+let countItems = 0;
 
 function changeActiveSize() {
   document.querySelectorAll('.open-btn-add').forEach(button => {
@@ -287,23 +292,15 @@ function changeActiveSize() {
 
 
       }
-      cartCount.textContent = String(Number(++cartCount.textContent))
+      cartBlock.innerHTML = cart();
+      countItems++;
+      if (countItems > 0) {
+        cartCount.textContent = countItems;
+      }
     })
   })
 
 
-  if (localStorage.getItem('kapsenCart') !== null) {
-    const lsObj = localStorage.getItem('kapsenCart');
-    const lsName = JSON.parse(lsObj)
-    let count = 0;
-    for (let models in lsName) {
-      count += models.length
-    }
-    if (count > 0) {
-      cartCount.classList.add('visible');
-      cartCount.textContent = String(count)
-    }
-  }
 
   const sizes = document.querySelectorAll('.catalog-size-row')
   sizes.forEach(size => {
@@ -339,3 +336,58 @@ function askForAvailable() {
   })
 }
 
+
+if (localStorage.getItem('kapsenCart') !== null) {
+  const lsObj = localStorage.getItem('kapsenCart');
+  const lsName = JSON.parse(lsObj)
+  // let count = 0;
+  for (let models in lsName) {
+    // countItems = 
+    // console.log(lsName)
+    // console.log(models)
+    // console.log(lsName[models].length)
+    countItems += lsName[models].length
+  }
+  if (countItems > 0) {
+    cartCount.classList.add('visible');
+    cartCount.textContent = countItems
+  } else {
+    cartCount.classList.remove('visible');
+
+  }
+}
+
+
+cartBlock.innerHTML = cart();
+
+function deliveryForms() {
+  const deliveryPrice = 2500;
+  const deliveryTab = document.getElementById('deliveryTab');
+  const pickupTab = document.getElementById('pickupTab');
+  const pickupTabContent = document.getElementById('pickupTabContent');
+  const deliveryTabContent = document.getElementById('deliveryTabContent');
+  const price = document.getElementById('total')
+
+  if (deliveryTab !== null) {
+    deliveryTab.addEventListener('click', () => {
+      deliveryTab.classList.add('active');
+      deliveryTabContent.classList.add('active');
+      pickupTab.classList.remove('active')
+      pickupTabContent.classList.remove('active')
+      price.textContent = Number(price.textContent) + deliveryPrice
+
+    })
+    pickupTab.addEventListener('click', () => {
+      console.log(price.textContent)
+      pickupTab.classList.add('active');
+      pickupTabContent.classList.add('active');
+      deliveryTab.classList.remove('active')
+      deliveryTabContent.classList.remove('active');
+      price.textContent = Number(price.textContent) - deliveryPrice
+    })
+
+
+  }
+}
+
+deliveryForms();
