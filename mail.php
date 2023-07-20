@@ -34,16 +34,16 @@ try {
   $mail->SMTPAuth   = true;
 
   // Настройки вашей почты
-  $mail->Host       = 'smtp.yandex.com'; // SMTP сервера вашей почты 
-  $mail->Username   = 'kapsentyres@yandex.ru'; // Логин на почте
-  $mail->Password   = 'bxlmgvqynfizlkbt'; // Пароль на почте
+  $mail->Host       = ''; // SMTP сервера вашей почты 
+  $mail->Username   = ''; // Логин на почте
+  $mail->Password   = ''; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('kapsentyres@yandex.ru', 'Заявка с сайта kapsentyres.org'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('', ''); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('info@kapsentyres.org');
+  $mail->addAddress('');
 
 
   // Отправка сообщения
