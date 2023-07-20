@@ -1,0 +1,11 @@
+User-agent: Yandex
+Allow: /
+sitemap: http://www.kapsentyres.org/sitemap.xml
+
+User-agent: Google
+Allow: /
+sitemap: http://www.kapsentyres.org/sitemap.xml
+
+
+User-agent: Mozilla/5.0 (compatible; YandexTurbo/1.0; +http://yandex.com/bots)
+Allow: /
